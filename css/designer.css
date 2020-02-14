@@ -574,7 +574,7 @@
   background-color: #fafafa; }
 
 #stamp-designer #rulers {
-  background: url(../images/designer/rulers.gif);
+  background: url(../images/designer/rulers.png);
   background-size: 100%;
   padding: 3%;
   border-top: 1px solid #5c9cd5;
@@ -582,10 +582,19 @@
   border-right: 1px solid #5c9cd5; }
 
 #stamp-designer #svg-holder {
-  background: url(../images/designer/checkerboard.png);
+
+    background: #8e8e8e;
+    background: url(../images/designer/checkerboard.png);
+    background-size: 80%;
+    position: relative;
+    width: 578px;
+    margin: 12px;
+
+  /* background: url(../images/designer/checkerboard.png);
   background-size: 100%;
-  position: relative;
-  /* LOW RES ONLY */ }
+  position: relative; */
+  /* LOW RES ONLY */ 
+}
   @media only screen and (max-width: 767px) {
     #stamp-designer #svg-holder {
       border: none; } }

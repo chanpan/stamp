@@ -7656,17 +7656,29 @@ var getArtworkPositionSettings = function() {
         return i
     },
     showFloatingDimensions = function(n, t) {
+        
         if (n == 0 && t == 0) {
             $("#flrls").hide();
             return
         }
+        //n=12;
+        let convertToCm = 2.54;//0.3937008;
+        var txtN = n*convertToCm;
+        var txtT = t*convertToCm;
+        //console.log(n);
+
         $("#flrls").show();
-        $("#flrls-htext").text(n + '"');
-        $("#flrls-vtext").text(t + '"');
+        $("#flrls-htext").text(txtN.toFixed(1) + ' \ncm.');
+        $("#flrls-vtext").text(txtT.toFixed(1) + ' \ncm.');
         n = Number(n);
         t = Number(t);
         t < .82 ? $("#flrls-vlines").hide() : $("#flrls-vlines").show();
         n < .82 ? $("#flrls-hlines").hide() : $("#flrls-hlines").show();
+
+        
+        //n/=convertToCm;
+        
+        
         $("#flrls-horz").attr("transform", "translate(" + SVG_CENTER_X + "," + (Number(t) * 48 + Number(SVG_CENTER_Y)) + ")");
         $("#flrls-vert").attr("transform", "translate(" + (Number(n) * 48 + Number(SVG_CENTER_X)) + "," + SVG_CENTER_Y + ")")
     },
@@ -8243,10 +8255,12 @@ var getArtworkPositionSettings = function() {
         rsuAttr(graphicGroupElements[n][t], "rsu:artworktype", i)
     },
     impressionChanged = function(n, t, i, r, u) {
+        
         inLoad != 2 && (u != !0 && (inLoad = 0), inLoad == 0 && setScd(), setBodiesStale(!0), checkShapeAutoSize(n, t, i, r))
     },
     checkShapeAutoSize = function(n, t, i, r) {
         var u, o, f, e;
+       
         if (!(impressionBusy > 0)) {
             for (u = getFullImpressionSize(), isAutosize === !0 || n == !0 ? updateShapeSize(u.width, u.height, u.rx, u.ry, u.r) : updateImpressionPosition(), o = shapeGroup.selectAll("[id^=sbr]"), f = 0; f < o.length; f++) o[f].remove();
             for (e = 0; e < subGroups.length; e++) bodyGroups.length > 0 && !hasGroupSizeOverrides() ? createImpressionBackground(impressionGroup) : createImpressionBackground(subGroups[e]);
@@ -9607,6 +9621,9 @@ $(document).ready(function() {
         textGroupLines[n.group][n.line].selectAll("tspan")[0].attr({
             "#text": t
         });
+
+        
+
         setCharacterSpacing(n);
         textGroupLines[n.group][n.line].data("dirty", !0);
         impressionChanged(!1, 2e3)
