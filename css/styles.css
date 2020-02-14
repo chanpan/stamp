@@ -230,7 +230,7 @@ body > form {margin:0;}
     /*UTIL*/
 	.header ul.util {list-style:none; margin:0 0 .5em; padding:0;font-size:85%;text-align:center;}
 	.header ul.util li {list-style:none; margin:0; padding:0; display:inline-block; white-space:nowrap;}
-	.header ul.util li a {padding:0 .5em 0 0;color:#ed1d24; border-radius:2px;}
+	.header ul.util li a {padding:0 .5em 0 0;color:#ed7e32; border-radius:2px;}
 	.header ul.util li a:hover {color:#5bc5bf;}
 		/*HIGH RES*/
 		@media only screen and (min-width:768px) {
@@ -247,9 +247,9 @@ body > form {margin:0;}
         }
     
     .header .minicart {font-family: 'Amaranth', sans-serif;font-size: 1.5em;}
-    .header .minicart i {color:#ed1d24;}
+    .header .minicart i {color:#ed7e32;}
     .header .minicart a {color:#5a5a5a;}
-	.header .minicart a:hover {color:#ed1d24;}
+	.header .minicart a:hover {color:#ed7e32;}
         /*HIGH RES*/
 		@media only screen and (min-width:768px) {
 			.header .minicart {float:right; clear: right;}
@@ -316,7 +316,7 @@ body > form {margin:0;}
         .header2 ul#headernavmenu ul.f-dropdown li a {font-size:13px;padding:0;}
 
 /*NAVWRAPPER*/
-	.navwrapper {background:#ed1d24;}
+	.navwrapper {background:#ed7e32;}
 	nav {margin-left:-1em; margin-right:-1em;}
 		/*HIGH RES*/
 		@media only screen and (min-width: 768px) {
@@ -342,8 +342,8 @@ body > form {margin:0;}
 /*SITEWIDE BANNER*/
     .sitewideBanner {text-align:center; margin:0; background:#fff;line-height:1.5;color:#444444;font-size:12px;font-weight:300;}
     .sitewideBanner .contentColumn > div {padding-top:.5em;padding-bottom:.5em;}
-    .sitewideBanner span.loud {color: #ED1D24;font-weight:700;}
-    .sitewideBanner span.knockout {background:#ED1D24;color:#fff;text-transform:uppercase;display:inline-block;padding-left:5px;padding-right:5px;font-weight:700;}
+    .sitewideBanner span.loud {color: #ed7e32;font-weight:700;}
+    .sitewideBanner span.knockout {background:#ed7e32;color:#fff;text-transform:uppercase;display:inline-block;padding-left:5px;padding-right:5px;font-weight:700;}
     /*HIGH RES*/
 		@media only screen and (min-width: 768px) {
 			.sitewideBanner {font-size:18px;}
@@ -502,7 +502,7 @@ body > form {margin:0;}
 		line-height: inherit; 
 	}
 	a:hover, a:focus {
-		color: #ED1D24; 
+		color: #ed7e32; 
 	}
 	a img {
 		border: none; 
@@ -537,13 +537,13 @@ body > form {margin:0;}
 	h1 {
 		font-size: 1.6em;
         text-transform:uppercase;
-        color: #ed1d24;
+        color: #ed7e32;
 	    margin-top: 15px;
 	}
 	h2 {
         font-size: 1.6em;
         text-transform:uppercase;
-        color: #ed1d24;
+        color: #ed7e32;
 	}
 	h3 {
 		font-size: 1.375em; 
@@ -985,7 +985,7 @@ body > form {margin:0;}
         line-height:1;
         padding-top:18px;
         padding-bottom: 18px;
-        background: #ed1d24;
+        background: #ed7e32;
     }
     button.clean.secondary,
     .button.clean.secondary {
@@ -2106,7 +2106,7 @@ body > form {margin:0;}
                 float: none;
 		    }
 		    .productgrid .SingleProductDisplayPanel .record .product-info .recordname a:hover {
-			    color: #ED1D24;
+			    color: #ed7e32;
 		    }
 		    /*ajax - added to cart message*/
 		    .productgrid .SingleProductDisplayPanel .record .product-info .recordadded {}
@@ -2554,8 +2554,8 @@ body > form {margin:0;}
 	/*category grid: name*/
 	.categorygrid .recordname {}
 	.categorygrid .recordname a {text-decoration: none;font-weight:200;color:#444;font-weight:700;font-size:20px;}
-	.categorygrid .recordname a:hover {color: #ED1D24;}
-    .categorygrid .recordname a i {color:#ED1D24;font-size:.75em;padding-left:10px;}
+	.categorygrid .recordname a:hover {color: #ed7e32;}
+    .categorygrid .recordname a i {color:#ed7e32;font-size:.75em;padding-left:10px;}
 
     .categorygrid .shortdesc {
         font-size: 14px;
@@ -2724,7 +2724,7 @@ body > form {margin:0;}
 	}
 	.pricebox table {width:100%; margin:0;}
 	.pricebox table td {padding-top: .5em; padding-bottom:.5px;}
-	.pricebox .SitePrice {font-size: 2em;color:#ED1D24;}
+	.pricebox .SitePrice {font-size: 2em;color:#ed7e32;}
 	.pricebox .ListPrice {text-decoration: line-through;}
 
 
@@ -2984,7 +2984,7 @@ body > form {margin:0;}
     ul.typedisplay li span.productpropertylabel {
         float: left;
         width: 35%;
-        color: #ED1D24;
+        color: #ed7e32;
         padding:5px;
     }
     ul.typedisplay li span.productpropertyvalue {
@@ -3730,7 +3730,7 @@ body > form {margin:0;}
 		margin: 10px 0;
 	}
 	.top-bar-section .dropdown li.title h5 a:hover {
-		background: #ED1D24;
+		background: #ed7e32;
 		color: #fff;
 	}
 	.top-bar-section .dropdown label {
@@ -3763,7 +3763,7 @@ body > form {margin:0;}
 	/*If your nav is wrapping before the mobile nav is diplayed you can change the point at which the nav flips to mobile view by adjusting min-width up. */
 	@media only screen and (min-width: 1168px) { /* This width is always 18px greater than the breakpoint width set above (.top-bar-js-breakpoint) */
 		.top-bar {
-			background: #ED1D24;
+			background: #ed7e32;
 			*zoom: 1;
 			overflow: visible; 
 		}
@@ -3812,7 +3812,7 @@ body > form {margin:0;}
 			width: auto;
 			height: auto !important;
 			display: inline; 
-            background:#ED1D24;
+            background:#ed7e32;
             font-size: 14px;
 		}
 		.top-bar-section ul li {
@@ -3832,7 +3832,7 @@ body > form {margin:0;}
 		.top-bar-section li a:not(.button) {
 			padding: 0 25px;
 			line-height: 65px;
-			background: #ED1D24;
+			background: #ed7e32;
 		}
 
         .top-bar-section ul li.active > a {
@@ -4338,7 +4338,7 @@ body > form {margin:0;}
 .price-box h3 {background:#5CC5C0;color:#fff;margin:0;padding:10px 15px;font-size:20px;}
 .price-box .cutoff {}
 .price-box .for {padding-top:0;}
-.price-box div.cost {font-size:13px;padding-top:0; color:#ED1D24;}
+.price-box div.cost {font-size:13px;padding-top:0; color:#ed7e32;}
 .price-box div.ships {font-size:13px;font-style:italic;padding-top:0;}
 .price-box div.arrives {font-size:13px;font-style:italic;padding-top:0;}
 
@@ -4350,7 +4350,7 @@ table.responsive {width:100%;}
 table.responsive th {background:#5CC5C0;color:#fff;font-size:13px;}
 .table-wrapper table td,
 table.responsive td {font-weight:normal;font-family:Arial,sans-serif;font-size:13px;}
-table tr td.first {color:#ED1D24;}
+table tr td.first {color:#ed7e32;}
 
 table.shippingtable tr:nth-child(even) {background: #f9f3e6}
 table.shippingtable tr:nth-child(odd) {background: #FFF}
@@ -4373,7 +4373,7 @@ table.shippingtable tr:nth-child(odd) {background: #FFF}
         color:#5CC5C0;
     }
     .alert-box.secondary a:hover {
-        color:#ED1D24;
+        color:#ed7e32;
     }
     
 /*new alert boxes for message box*/
@@ -4567,7 +4567,7 @@ div#BandStampPreview {
 	margin-bottom:100px;
 }
 div#bandDropTarget {
-	background-color:#ED1D24;
+	background-color:#ed7e32;
 	min-width:250px;
 	min-height:300px;
 	padding:5px;
@@ -4643,7 +4643,7 @@ div.cSize {float:left;	margin:0 10px 0 0;	padding:0 1px;}
   left: 50%;
   width: 100%;
   color: white;
-  background: #ED1D24;
+  background: #ed7e32;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
   .tooltip > .nub {
@@ -4653,7 +4653,7 @@ div.cSize {float:left;	margin:0 10px 0 0;	padding:0 1px;}
     width: 0;
     height: 0;
     border: solid 5px;
-    border-color: transparent transparent #ED1D24 transparent;
+    border-color: transparent transparent #ed7e32 transparent;
     top: -10px; }
   .tooltip.opened {
     color: #2ba6cb !important;
@@ -4667,22 +4667,22 @@ div.cSize {float:left;	margin:0 10px 0 0;	padding:0 1px;}
 
 @media only screen and (min-width: 768px) {
   .tooltip > .nub {
-    border-color: transparent transparent #ED1D24 transparent;
+    border-color: transparent transparent #ed7e32 transparent;
     top: -10px; }
   .tooltip.tip-top > .nub {
-    border-color: #ED1D24 transparent transparent transparent;
+    border-color: #ed7e32 transparent transparent transparent;
     top: auto;
     bottom: -10px; }
   .tooltip.tip-left, .tooltip.tip-right {
     float: none !important; }
   .tooltip.tip-left > .nub {
-    border-color: transparent transparent transparent #ED1D24;
+    border-color: transparent transparent transparent #ed7e32;
     right: -10px;
     left: auto;
     top: 50%;
     margin-top: -5px; }
   .tooltip.tip-right > .nub {
-    border-color: transparent #ED1D24 transparent transparent;
+    border-color: transparent #ed7e32 transparent transparent;
     right: auto;
     left: -10px;
     top: 50%;
