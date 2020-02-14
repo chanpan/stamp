@@ -22,251 +22,40 @@
 
 
 @font-face {
-  font-family: 'Addington CF';
-  src: url("../Fonts/AddingtonCFStampMaker-Regular.woff2") format("woff2");
-  src: url("../Fonts/AddingtonCFStampMaker-Regular.woff") format("woff");
+  font-family: 'THCharmonman';
+  src: url("../Fonts/THCharmonman.woff2") format("woff2");
+  src: url("../Fonts/THCharmonman.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Addington CF';
-  src: url("../Fonts/AddingtonCFStampMaker-DemiBold.woff2") format("woff2");
-  src: url("../Fonts/AddingtonCFStampMaker-DemiBold.woff") format("woff");
+  font-family: 'THKrub';
+  src: url("../Fonts/THKrub.woff2") format("woff2");
+  src: url("../Fonts/THKrub.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Addington CF';
-  src: url("../Fonts/AddingtonCFStampMaker-DemiBoldItalic.woff2") format("woff2");
-  src: url("../Fonts/AddingtonCFStampMaker-DemiBoldItalic.woff") format("woff");
+  font-family: 'THSrisakdi';
+  src: url("../Fonts/THSrisakdi.woff2") format("woff2");
+  src: url("../Fonts/THSrisakdi.woff") format("woff");
   font-weight: 700;
   font-style: italic; }
 
 @font-face {
-  font-family: 'Addington CF';
-  src: url("../Fonts/AddingtonCFStampMaker-Regularitalic.woff2") format("woff2");
-  src: url("../Fonts/AddingtonCFStampMaker-Regularitalic.woff") format("woff");
+  font-family: 'THNiramitAS';
+  src: url("../Fonts/THNiramitAS.woff2") format("woff2");
+  src: url("../Fonts/THNiramitAS.woff") format("woff");
   font-weight: 400;
   font-style: italic; }
 
 @font-face {
-  font-family: 'Greycliff CF';
-  src: url("../Fonts/GreycliffCF-Light.woff2") format("woff2");
-  src: url("../Fonts/GreycliffCF-Light.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Greycliff CF';
-  src: url("../Fonts/GreycliffCF-DemiBold.woff2") format("woff2");
-  src: url("../Fonts/GreycliffCF-DemiBold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Greycliff CF';
-  src: url("../Fonts/GreycliffCF-DemiBoldOblique.woff2") format("woff2");
-  src: url("../Fonts/GreycliffCF-DemiBoldOblique.woff") format("woff");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Greycliff CF';
-  src: url("../Fonts/GreycliffCF-LightOblique.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Articulat CF v2';
-  src: url("../Fonts/ArticulatCFv2-Text.woff") format("woff");
+  font-family: 'THMaliGrade6';
+  src: url("../Fonts/THMaliGrade6.woff") format("woff2");
+  src: url("../Fonts/THMaliGrade6.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
-@font-face {
-  font-family: 'Articulat CF v2';
-  src: url("../Fonts/ArticulatCFv2-DemiBold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Articulat CF v2';
-  src: url("../Fonts/ArticulatCFv2-DemiBoldOblique.woff") format("woff");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Articulat CF v2';
-  src: url("../Fonts/ArticulatCFv2-TextOblique.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Loveletter Script';
-  src: url("../Fonts/LoveletterScript-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Loveletter Script';
-  src: url("../Fonts/LoveletterScript-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Loveletter Script';
-  src: url("../Fonts/LoveletterScript-RegularItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Loveletter Script';
-  src: url("../Fonts/LoveletterScript-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Sherina';
-  src: url("../Fonts/Sherina.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Sherina';
-  src: url("../Fonts/Sherina-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Sherina';
-  src: url("../Fonts/Sherina-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Sherina';
-  src: url("../Fonts/Sherina-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Jenna';
-  src: url("../Fonts/Jenna.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Jenna';
-  src: url("../Fonts/Jenna-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Jenna';
-  src: url("../Fonts/Jenna-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Jenna';
-  src: url("../Fonts/Jenna-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'zakia';
-  src: url("../Fonts/zakia-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'zakia';
-  src: url("../Fonts/zakia-webfont-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'zakia';
-  src: url("../Fonts/zakia-webfont-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'zakia';
-  src: url("../Fonts/zakia-webfont-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'quand tu dors';
-  src: url("../Fonts/quand_tu_dors_nk.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'quand tu dors';
-  src: url("../Fonts/quand_tu_dors_nk-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'quand tu dors';
-  src: url("../Fonts/quand_tu_dors_nk-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'quand tu dors';
-  src: url("../Fonts/quand_tu_dors_nk-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Engravers Gothic FS';
-  src: url("../Fonts/EngraversGothic-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Engravers Gothic FS';
-  src: url("../Fonts/EngraversGothic-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Engravers Gothic FS';
-  src: url("../Fonts/EngraversGothic-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Engravers Gothic FS';
-  src: url("../Fonts/EngraversGothic-RegularItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Florence Script FS';
-  src: url("../Fonts/FlorenceScript-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Florence Script FS';
-  src: url("../Fonts/FlorenceScript-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Florence Script FS';
-  src: url("../Fonts/FlorenceScript-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Florence Script FS';
-  src: url("../Fonts/FlorenceScript-RegularItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
 
 /**
  * selectize.css (v0.12.3)
@@ -595,9 +384,10 @@
   background: url(../images/designer/rulers.png);
   background-size: 100%;
   padding: 3%;
-  border-top: 1px solid #5c9cd5;
-  border-left: 1px solid #5c9cd5;
-  border-right: 1px solid #5c9cd5; }
+  border-top: 3px solid #ed7e32;
+  border-left: 3px solid #ed7e32;
+  border-right: 3px solid #ed7e32;
+}
 
 #stamp-designer #svg-holder {
 
@@ -605,7 +395,7 @@
     background: url(../images/designer/checkerboard.png);
     background-size: 80%;
     position: relative;
-    width: 578px;
+    width: 575px;
     margin: 12px;
 
   /* background: url(../images/designer/checkerboard.png);
@@ -883,14 +673,14 @@
     #stamp-designer .section-container.tabs > .section > .content,
     #stamp-designer .section-container.tabs > section > .content,
     #stamp-designer .section-container.tabs > section > .content {
-      background-color: #f3f0e9;
+      background-color: #fff;
       border-color: #5c9cd5; }
     #stamp-designer .section-container.tabs > .section > .title,
     #stamp-designer .section-container.tabs > .section > .title,
     #stamp-designer .section-container.tabs > section > .title,
     #stamp-designer .section-container.tabs > section > .title {
-      background-color: #dddddd;
-      border-color: #bdbdbd;
+      background-color: #fff;
+      border-color: #fff;
       border-bottom-color: #5c9cd5; }
       #stamp-designer .section-container.tabs > .section > .title a,
       #stamp-designer .section-container.tabs > .section > .title a,
@@ -938,7 +728,7 @@
         left: 224px !important; } }
   #stamp-designer .section-container.tabs > .section.active > .title,
   #stamp-designer .section-container.tabs > section.active > .title {
-    background: #f3f0e9;
+    background: #fff;
     border-color: #5c9cd5;
     border-bottom: none;
     z-index: 90; }
