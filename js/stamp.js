@@ -7669,7 +7669,7 @@ var getArtworkPositionSettings = function() {
 
         $("#flrls").show();
         $("#flrls-htext").text(txtN.toFixed(1) + ' \ncm.');
-        $("#flrls-vtext").text(txtT.toFixed(1) + ' \ncm.');
+        $("#flrls-vtext").text(txtT.toFixed() + ' \ncm.');
         n = Number(n);
         t = Number(t);
         t < .82 ? $("#flrls-vlines").hide() : $("#flrls-vlines").show();
@@ -7857,9 +7857,10 @@ var getArtworkPositionSettings = function() {
             s = -o / 8,
             t, r;
         if (e > 1)
-            for (t = 0; t < e; t++) r = s, i[t] != " " ? (i[t] != "_" || i[t + 1] != "_") && (r = .48) : r = 0, f += " " + r;
+            for (t = 0; t < e; t++) r = s, i[t] != "  " ? (i[t] != "_" || i[t + 1] != "_") && (r = .48) : r = 0, f += " " + r;
+            
         u.attr({
-            dx: f
+            //dx: f
         })
     },
     getWidths = function(n, t) {
