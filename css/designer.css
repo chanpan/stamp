@@ -460,9 +460,9 @@
   margin-bottom: 10px; }
   @media only screen and (min-width: 768px) {
     #stamp-designer #footer-menu {
-      border-left: 1px solid #5c9cd5;
-      border-right: 1px solid #5c9cd5;
-      border-bottom: 1px solid #5c9cd5; } }
+      border-left: 1px solid #ed7e32;
+      border-right: 1px solid #ed7e32;
+      border-bottom: 1px solid #ed7e32; } }
   #stamp-designer #footer-menu #top-row {
     font-family: Arial, sans-serif;
     background-color: rgba(180, 180, 180, 0.3);
@@ -549,19 +549,19 @@
       text-align: right; }
     #stamp-designer #footer-menu #bottom-row #start-over-btn.button {
       background: #5c9cd5;
-      border-color: #5c9cd5;
+      border-color: #ed7e32;
       padding: 5px 10px; }
     #stamp-designer #footer-menu #bottom-row #save-btn.button {
       background: #5c9cd5;
-      border-color: #5c9cd5;
+      border-color: #ed7e32;
       padding: 5px 10px; }
     #stamp-designer #footer-menu #bottom-row #proof-btn {
       background: #5c9cd5;
-      border-color: #5c9cd5;
+      border-color: #ed7e32;
       padding: 5px 10px; }
     #stamp-designer #footer-menu #bottom-row #scalereset-btn {
       background: #5c9cd5;
-      border-color: #5c9cd5;
+      border-color: #ed7e32;
       padding: 5px 10px; }
 
 #stamp-designer form.custom .custom.dropdown {
@@ -674,14 +674,14 @@
     #stamp-designer .section-container.tabs > section > .content,
     #stamp-designer .section-container.tabs > section > .content {
       background-color: #fff;
-      border-color: #5c9cd5; }
+      border-color: #ed7e32; }
     #stamp-designer .section-container.tabs > .section > .title,
     #stamp-designer .section-container.tabs > .section > .title,
     #stamp-designer .section-container.tabs > section > .title,
     #stamp-designer .section-container.tabs > section > .title {
       background-color: #fff;
       border-color: #fff;
-      border-bottom-color: #5c9cd5; }
+      border-bottom-color: #ed7e32; }
       #stamp-designer .section-container.tabs > .section > .title a,
       #stamp-designer .section-container.tabs > .section > .title a,
       #stamp-designer .section-container.tabs > section > .title a,
@@ -729,7 +729,7 @@
   #stamp-designer .section-container.tabs > .section.active > .title,
   #stamp-designer .section-container.tabs > section.active > .title {
     background: #fff;
-    border-color: #5c9cd5;
+    border-color: #ed7e32;
     border-bottom: none;
     z-index: 90; }
 
