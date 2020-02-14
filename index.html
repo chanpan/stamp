@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head id="ctl00_Head1">
@@ -82,12 +79,12 @@
                                         </div>
                                         <div class="small-6 large-4 columns">
                                             <select class="text-font small">
-                                                <option value="Addington CF" class="font-addington-times">Addington Times</option>
+                                                <option value="THSarabunNew" class="font-addington-times">THSarabunNew</option>
                                                 <option value="Articulat CF v2">Articulat</option>
                                                 <option value="Greycliff CF">Greycliff</option>
                                                 <option value="Engravers Gothic FS">Engravers Gothic</option>
                                                 <option value="Florence Script FS">Florence Script</option>
-                                                
+                                                <option value="Addington CF" >Addington Times</option>
                                                 <option value="Loveletter Script">Love Letters</option>
                                                 <option value="Jenna">Jenna</option>
                                                 <option value="Zakia">Zakia</option>
@@ -229,7 +226,7 @@
           </div>
         </div>        
         <br>
-        <font color="red"></font>
+        <!-- <font color="red"></font> -->
     
 	</div>
 
@@ -447,7 +444,7 @@
                                 </defs>
                                 <g id="flrls-horz" transform="translate(288,0)">
                                     <g transform="scale(1.1) translate(0, 2)">
-                                        <text text-anchor="middle" x="0" y="11.175" id="flrls-htext" style="font-size: 13.333px; font-family: Addington CF; font-weight: 400; font-style: normal;">.25"</text>
+                                        <text text-anchor="middle" x="0" y="11.175" id="flrls-htext" style="font-size: 13.333px; font-family: THSarabunNew; font-weight: 400; font-style: normal;">.25"</text>
                                         <g id="flrls-hlines">
                                             <line x1="-45" y1="7.7" x2="-20" y2="7.7" stroke="#000" stroke-width="1.4" marker-start="url(#flrls-s)" />
                                             <line x1="20" y1="7.7" x2="45" y2="7.7"stroke="#000" stroke-width="1.4" marker-end="url(#flrls-e)" />
@@ -456,7 +453,7 @@
                                 </g>
                                 <g id="flrls-vert" transform="translate(288,288)">
                                     <g transform="scale(1.1) translate(2, 0)">
-                                        <text transform="rotate(90) translate(0,-13.333)" x="0" text-anchor="middle" y="11.175" id="flrls-vtext" style="font-size: 13.333px; font-family: Addington CF; font-weight: 400; font-style: normal;">.22"</text>
+                                        <text transform="rotate(90) translate(0,-13.333)" x="0" text-anchor="middle" y="11.175" id="flrls-vtext" style="font-size: 13.333px; font-family: THSarabunNew; font-weight: 400; font-style: normal;">.22"</text>
                                         <g id="flrls-vlines">
                                             <line x1="7.7" y1="-45" x2="7.7" y2="-20" stroke="#000" stroke-width="1.4" marker-start="url(#flrls-s)" />
                                             <line x1="7.7" y1="20" x2="7.7" y2="45"stroke="#000" stroke-width="1.4" marker-end="url(#flrls-e)" />
@@ -486,7 +483,7 @@
     //const MAX_STAMP_SIZE = 576;
     const MAX_TEXT_LINES = 23;
     const STARTING_SIZE = 24;  // 24
-    const START_FONT = "Articulat CF v2";
+    const START_FONT = "THSarabunNew";
     const START_FONT_SIZE = 12; // Starting font size
     //const PADDING = START_FONT_SIZE / 4;
     const PADDING = 0; //TEST
@@ -498,38 +495,43 @@
 var si; 
 var initsi = {"p1":null,"width":0,"height":0,"fSelIdx":-1,"fSelColor":"","fSelBvin":null,"user":null,"initialTemplate":"\u003cg id=\"gsvgimpression\" xml:space=\"default\" rsu:impressiongroups=\"s00:1\" rsu:layoutorder=\"s00\"\u003e\u003cg id=\"svgsubgroup00\" xml:space=\"default\" rsu:syncgroups=\"t00,g00\" rsu:align=\"top\" rsu:syncsize=\"full,center\" rsu:layoutorder=\"g00,t00\" rsu:dmsize=\"24,24\"\u003e\u003cg id=\"svgtextgroup00\" xml:space=\"default\" rsu:syncsize=\"best,center\" rsu:anchor=\"opposite,g00:o\"\u003e\u003c/g\u003e\u003cg id=\"svggraphicgroup00\" xml:space=\"default\" rsu:align=\"top\"\u003e\u003c/g\u003e\u003c/g\u003e\u003c/g\u003e","allowedBodies":"[\"Maxlight,Rectangle,,,MAXLIGHT_XL_305|MAXLIGHT_XL_325,Premium - 50,000+ impressions\",\"Trodat,Rectangle,,,,Standard - 7,000+ impressions\", \"TheStampMaker.com,Rectangle,,,,Economy - for use with a stamp pad\"]","initialBody":null,"templateProductId":"26980e28-cb46-4b7c-ac66-3675316e0750","itemId":null,"itemIdType":0};
 var brm = [
-        {"ff":"Addington CF","fn":null,"bd":true,"it":false,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
-        {"ff":"Addington CF","fn":null,"bd":true,"it":true,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
-        {"ff":"Addington CF","fn":"Addington Times","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
-        {"ff":"Addington CF","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
-        {"ff":"Articulat CF v2","fn":null,"bd":true,"it":false,"uo":-0.075,"ut":0.05,"a":0.98,"d":0.22,"m":9.333334},
-        {"ff":"Articulat CF v2","fn":null,"bd":true,"it":true,"uo":-0.075,"ut":0.05,"a":0.98,"d":0.22,"m":9.333334},
-        {"ff":"Articulat CF v2","fn":"Articulat","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":0.98,"d":0.22,"m":9.333334},
-        {"ff":"Articulat CF v2","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":0.98,"d":0.22,"m":9.333334},
-        {"ff":"Engravers Gothic FS","fn":null,"bd":true,"it":false,"uo":-0.177,"ut":0.065,"a":0.8,"d":0.2,"m":10.666667},
-        {"ff":"Engravers Gothic FS","fn":null,"bd":true,"it":true,"uo":-0.177,"ut":0.065,"a":0.8,"d":0.2,"m":10.666667},
-        {"ff":"Engravers Gothic FS","fn":"Engravers Gothic","bd":false,"it":false,"uo":-0.191,"ut":0.05,"a":0.8,"d":0.2,"m":10.666667},
-        {"ff":"Engravers Gothic FS","fn":null,"bd":false,"it":true,"uo":-0.191,"ut":0.05,"a":0.8,"d":0.2,"m":10.666667},
-        {"ff":"Greycliff CF","fn":null,"bd":true,"it":false,"uo":-0.075,"ut":0.05,"a":0.94,"d":0.306,"m":10.666667},
-        {"ff":"Greycliff CF","fn":null,"bd":true,"it":true,"uo":-0.075,"ut":0.05,"a":0.94,"d":0.25,"m":10.666667},
-        {"ff":"Greycliff CF","fn":"Greycliff","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":0.938,"d":0.264,"m":10.666667},
-        {"ff":"Greycliff CF","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":0.938,"d":0.211,"m":10.666667},
-        {"ff":"Florence Script FS","fn":null,"bd":true,"it":false,"uo":-0.095,"ut":0.05,"a":0.913,"d":0.303,"m":10.666667},
-        {"ff":"Florence Script FS","fn":null,"bd":true,"it":true,"uo":-0.095,"ut":0.05,"a":0.913,"d":0.302,"m":10.666667},
-        {"ff":"Florence Script FS","fn":null,"bd":false,"it":true,"uo":-0.095,"ut":0.05,"a":0.898,"d":0.29,"m":10.666667},
-        {"ff":"Florence Script FS","fn":"Florence Script","bd":false,"it":false,"uo":-0.095,"ut":0.05,"a":0.898,"d":0.29,"m":10.666667},
-        {"ff":"Sherina","fn":"Sherina","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":1.136,"d":0.531,"m":13.333334},
-        {"ff":"Sherina","fn":null,"bd":true,"it":false,"uo":-0.06,"ut":0.065,"a":1.136,"d":0.531,"m":13.333334},
-        {"ff":"Sherina","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":1.136,"d":0.531,"m":13.333334},
-        {"ff":"Sherina","fn":null,"bd":true,"it":true,"uo":-0.06,"ut":0.065,"a":1.136,"d":0.531,"m":13.333334},
-        {"ff":"Loveletter Script","fn":"Love Letters","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":1.035,"d":0,"m":18.6666679},
-        {"ff":"Loveletter Script","fn":null,"bd":true,"it":false,"uo":-0.06,"ut":0.065,"a":1.039,"d":0.004,"m":18.6666679},
-        {"ff":"Loveletter Script","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":1.035,"d":0,"m":18.6666679},
-        {"ff":"Loveletter Script","fn":null,"bd":true,"it":true,"uo":-0.06,"ut":0.065,"a":1.039,"d":0.004,"m":18.6666679},
-        {"ff":"Jenna","fn":"Jenna","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":0.845,"d":0.395,"m":12},
-        {"ff":"Jenna","fn":null,"bd":true,"it":false,"uo":-0.06,"ut":0.065,"a":0.845,"d":0.395,"m":12},
-        {"ff":"Jenna","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":0.845,"d":0.395,"m":12},
-        {"ff":"Jenna","fn":null,"bd":true,"it":true,"uo":-0.06,"ut":0.065,"a":0.845,"d":0.395,"m":12}
+
+        {"ff":"THSarabunNew","fn":"THSarabunNew","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
+        {"ff":"JKJING-StarNew","fn":"JKJING-StarNew","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
+        {"ff":"THSarabunNew","fn":"THSarabunNew","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":0.98,"d":0.22,"m":9.333334},
+
+        //{"ff":"Addington CF","fn":null,"bd":true,"it":false,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
+        // {"ff":"Addington CF","fn":null,"bd":true,"it":true,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
+        // {"ff":"Addington CF","fn":"Addington Times","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
+        // {"ff":"Addington CF","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":1.025,"d":0.175,"m":10.666667},
+        // {"ff":"Articulat CF v2","fn":null,"bd":true,"it":false,"uo":-0.075,"ut":0.05,"a":0.98,"d":0.22,"m":9.333334},
+        // {"ff":"Articulat CF v2","fn":null,"bd":true,"it":true,"uo":-0.075,"ut":0.05,"a":0.98,"d":0.22,"m":9.333334},
+        // {"ff":"Articulat CF v2","fn":"Articulat","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":0.98,"d":0.22,"m":9.333334},
+        // {"ff":"Articulat CF v2","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":0.98,"d":0.22,"m":9.333334},
+        // {"ff":"Engravers Gothic FS","fn":null,"bd":true,"it":false,"uo":-0.177,"ut":0.065,"a":0.8,"d":0.2,"m":10.666667},
+        // {"ff":"Engravers Gothic FS","fn":null,"bd":true,"it":true,"uo":-0.177,"ut":0.065,"a":0.8,"d":0.2,"m":10.666667},
+        // {"ff":"Engravers Gothic FS","fn":"Engravers Gothic","bd":false,"it":false,"uo":-0.191,"ut":0.05,"a":0.8,"d":0.2,"m":10.666667},
+        // {"ff":"Engravers Gothic FS","fn":null,"bd":false,"it":true,"uo":-0.191,"ut":0.05,"a":0.8,"d":0.2,"m":10.666667},
+        // {"ff":"Greycliff CF","fn":null,"bd":true,"it":false,"uo":-0.075,"ut":0.05,"a":0.94,"d":0.306,"m":10.666667},
+        // {"ff":"Greycliff CF","fn":null,"bd":true,"it":true,"uo":-0.075,"ut":0.05,"a":0.94,"d":0.25,"m":10.666667},
+        // {"ff":"Greycliff CF","fn":"Greycliff","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":0.938,"d":0.264,"m":10.666667},
+        // {"ff":"Greycliff CF","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":0.938,"d":0.211,"m":10.666667},
+        // {"ff":"Florence Script FS","fn":null,"bd":true,"it":false,"uo":-0.095,"ut":0.05,"a":0.913,"d":0.303,"m":10.666667},
+        // {"ff":"Florence Script FS","fn":null,"bd":true,"it":true,"uo":-0.095,"ut":0.05,"a":0.913,"d":0.302,"m":10.666667},
+        // {"ff":"Florence Script FS","fn":null,"bd":false,"it":true,"uo":-0.095,"ut":0.05,"a":0.898,"d":0.29,"m":10.666667},
+        // {"ff":"Florence Script FS","fn":"Florence Script","bd":false,"it":false,"uo":-0.095,"ut":0.05,"a":0.898,"d":0.29,"m":10.666667},
+        // {"ff":"Sherina","fn":"Sherina","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":1.136,"d":0.531,"m":13.333334},
+        // {"ff":"Sherina","fn":null,"bd":true,"it":false,"uo":-0.06,"ut":0.065,"a":1.136,"d":0.531,"m":13.333334},
+        // {"ff":"Sherina","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":1.136,"d":0.531,"m":13.333334},
+        // {"ff":"Sherina","fn":null,"bd":true,"it":true,"uo":-0.06,"ut":0.065,"a":1.136,"d":0.531,"m":13.333334},
+        // {"ff":"Loveletter Script","fn":"Love Letters","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":1.035,"d":0,"m":18.6666679},
+        // {"ff":"Loveletter Script","fn":null,"bd":true,"it":false,"uo":-0.06,"ut":0.065,"a":1.039,"d":0.004,"m":18.6666679},
+        // {"ff":"Loveletter Script","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":1.035,"d":0,"m":18.6666679},
+        // {"ff":"Loveletter Script","fn":null,"bd":true,"it":true,"uo":-0.06,"ut":0.065,"a":1.039,"d":0.004,"m":18.6666679},
+        // {"ff":"Jenna","fn":"Jenna","bd":false,"it":false,"uo":-0.075,"ut":0.05,"a":0.845,"d":0.395,"m":12},
+        // {"ff":"Jenna","fn":null,"bd":true,"it":false,"uo":-0.06,"ut":0.065,"a":0.845,"d":0.395,"m":12},
+        // {"ff":"Jenna","fn":null,"bd":false,"it":true,"uo":-0.075,"ut":0.05,"a":0.845,"d":0.395,"m":12},
+        // {"ff":"Jenna","fn":null,"bd":true,"it":true,"uo":-0.06,"ut":0.065,"a":0.845,"d":0.395,"m":12}
 ];
 var lgi = false;
 var dfs=[7,8,9,10,11,12,14,18,24,36,48,60,72,96];

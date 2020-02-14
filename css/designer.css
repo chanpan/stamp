@@ -3,6 +3,24 @@
   font-family: 'blank rbr';
   src: url("../Fonts/blank-rbr.woff"); }
 
+
+  @font-face {
+    font-family: 'THSarabunNew';
+    src: url("../Fonts/THSarabunNew.woff2") format("woff2");
+    src: url("../Fonts/THSarabunNew.woff") format("woff");
+    font-weight: 400;
+    font-style: normal; 
+  }  
+  @font-face {
+    font-family: 'JKJING-StarNew';
+    src: url("../Fonts/JKJING-StarNew.woff2") format("woff2");
+    src: url("../Fonts/JKJING-StarNew.woff") format("woff");
+    font-weight: 400;
+    font-style: normal; 
+  }  
+
+
+
 @font-face {
   font-family: 'Addington CF';
   src: url("../Fonts/AddingtonCFStampMaker-Regular.woff2") format("woff2");
