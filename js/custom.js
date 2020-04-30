@@ -143,7 +143,8 @@ function AddToCart(n, t, i, r, u, f, e, o, s, h, c) {
 function GetMatchingBodies(n, t, i, r) {
     
     //get product
-    let url = 'http://backend.stamp.local/product/api2';
+    // let url = 'http://backend.stamp.local/product/api2';
+    let url = 'http://backendstamp.newriched.com/product/api2';
     let params = {widthCM:widthCM, heightCM:heightCM,type:1};
     $.get(url,params, function(result){
         let html = '<div class="row">';
