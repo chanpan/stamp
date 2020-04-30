@@ -153,7 +153,7 @@ function GetMatchingBodies(n, t, i, r) {
             html += `
                 <div class='col-md-3'>
                     <div class='col-md-12 category'>
-                        <a href='http://stamp.local/product/detail?id=${i['productId']}' style='text-decoration:none'>
+                        <a target='_blank' href='http://stamp.local/product/detail?id=${i['productId']}' style='text-decoration:none'>
                             ${i['image']}
                             <div class='text-center'>
                             <div>${i['productName']}</div>
