@@ -44,7 +44,7 @@
 
 
 
-<body >
+<body style='padding:20px;'>
     <form name="aspnetForm" method="post" id="aspnetForm">
         <script type="text/javascript">
             //init ค่าเริ่มต้งตรงการ สีเหลี่ยมสีขาว
