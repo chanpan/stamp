@@ -389,14 +389,14 @@
   border-right: 3px solid #ed7e32;
 }
 
-#stamp-designer #svg-holder {
-
+#stamp-designer #svg-holder { 
     background: #8e8e8e;
     background: url(../images/designer/checkerboard.png);
-    background-size: 80%;
+    background-size: 100%;
     position: relative;
-    width: 575px;
-    margin: 12px;
+    /* width: 490px;
+    height: 490px; */
+    margin: 10px;
 
   /* background: url(../images/designer/checkerboard.png);
   background-size: 100%;

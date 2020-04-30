@@ -1,3 +1,5 @@
+var widthCM = 0;
+var heightCM = 0;
 function setupliFinishedCallback(n) {
     upliFinishedCallback = n
 }
@@ -139,21 +141,39 @@ function AddToCart(n, t, i, r, u, f, e, o, s, h, c) {
 }
 
 function GetMatchingBodies(n, t, i, r) {
-    console.log('ok');
+    
     //get product
-    let url = 'http://backend.stamp.local/product/api/index';
-    $.ajax({
-        type: 'get',
-        crossDomain: true,
-        url: url,
-        success: function(result){
-            console.log(result);
+    let url = 'http://backend.stamp.local/product/api2';
+    let params = {widthCM:widthCM, heightCM:heightCM,type:1};
+    $.get(url,params, function(result){
+        let html = '<div class="row">';
+        for(let i of result){
+            console.log(i);
+            html += `
+                <div class='col-md-3'>
+                    <div class='col-md-12 category'>
+                        <a href='http://stamp.local/product/detail?id=${i['productId']}' style='text-decoration:none'>
+                            ${i['image']}
+                            <div class='text-center'>
+                            <div>${i['productName']}</div>
+                            <ul class="fr__pro__prize">
+                                <li class="old__prize"><strike>${i['price']}</strike></li>
+                                <li>${i['disprice']}</li>
+                            </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            `;
         }
-     });
+        html += '</div>';
+        $("#showProduct").html(html);
+    });
     return false;
-   // console.log('GetMatchingBodies')
-    //for (var f = '{"size": { "areas": [', u = 0; u < n.length; u++)u != 0 && (f += ","), f += JSON.stringify(n[u]); for (f += "]}", f += ',"matchCriteria": [', u = 0; u < t.length; u++)u != 0 && (f += ","), f += JSON.stringify(t[u]); f += "]}";
-    //console.log(JSON.parse(f))
+
+//    console.log('GetMatchingBodies')
+//     for (var f = '{"size": { "areas": [', u = 0; u < n.length; u++)u != 0 && (f += ","), f += JSON.stringify(n[u]); for (f += "]}", f += ',"matchCriteria": [', u = 0; u < t.length; u++)u != 0 && (f += ","), f += JSON.stringify(t[u]); f += "]}";
+//     console.log(JSON.parse(f))
     //console.log(t)
     // showStampBodies(!0);
     // setAddToCartState();
@@ -7699,6 +7719,9 @@ var getArtworkPositionSettings = function() {
         $("#flrls").show();
         $("#flrls-htext").text(txtN.toFixed(1) + ' cm.');
         $("#flrls-vtext").text(txtT.toFixed(1) + ' cm.');
+        widthCM = txtN.toFixed(1);
+        heightCM = txtT.toFixed(1);
+
         n = Number(n);
         t = Number(t);
         t < .82 ? $("#flrls-vlines").hide() : $("#flrls-vlines").show();

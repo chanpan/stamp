@@ -6,27 +6,40 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta id="ctl00_MetaKeywords" name="Keywords" /><meta id="ctl00_MetaDescription" name="Description" content="See, design, &amp; buy custom rubber stamps, including pre-inked address stampers and date stamps - plus more. Most ship in 1 day!" />
-        
+
         <link href="./css/normalize.css" rel="stylesheet">
         <link href="./css/foundation.min.css" rel="stylesheet">
-        <link href="./css/responsive-tables.css" rel="stylesheet">  
+        <link href="./css/responsive-tables.css" rel="stylesheet">
         <link href="./css/webicons.css" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
         <link href="./css/designer.css" rel="stylesheet">
+        <link href="./css/UploadImage.css" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
         <script src="./jquery.min.js"></script>
         <script src="./bootstrap/js/bootstrap.min.js"></script>
         <script src="./js/custom.modernizr.js"></script>
-        
+
         <script src="./js/responsive-tables.js"></script>
         <script src="./js/foundation.min.js"></script>
         <script src="./js/foundation.dropdown.js"></script>
         <script src="./js/foundation.topbar.js"></script>
-        <script src="./js/stamp.js"></script>
+        <script src="./js/custom.js"></script>
+
+
         <script>
             $(document).ready(function () {
                 $(document).foundation();
             });
+        </script>
+        <script type="text/javascript">
+            var upli_id = '5902';
+            var upli_btn_idle_text = 'Browse...';
+            function upli_updatecontrol ()
+            {
+                setTimeout(function () {__doPostBack('ctl00_MainContentHolder_caUploadUpdatePanel', upli_id);}, 10);
+            }
         </script>
 
 
@@ -35,29 +48,31 @@
     <form name="aspnetForm" method="post" id="aspnetForm">
         <script type="text/javascript">
             //init ค่าเริ่มต้งตรงการ สีเหลี่ยมสีขาว
-            var _bvLoggedIn = 0;  
+            var _bvLoggedIn = 0;
             function bvLoggedIn(_lis) {
-                return _lis == undefined ? _bvLoggedIn : _bvLoggedIn = _lis; 
+                return _lis == undefined ? _bvLoggedIn : _bvLoggedIn = _lis;
             };
         </script>
-         
+
     <div id="stamp-designer">
         <h1>ออกแบบตรายางที่กำหนดเอง</h1>
         <div class="row">
-            
+
 
             <div class="large-6 columns">
-			
+
                 <div class="hideforlowres">
 				    <h4>ขั้นตอนที่ 1 ออกแบบแสตมป์ของคุณ</h4>
 				    <p class="regularstamp" style="font-weight:normal;display:none">หมายเหตุ: การออกแบบแสตมป์ต้องไม่เกิน 12.5x12.5 cm.</p>
                 </div>
+
+               
                 <!-- Tabs -->
 
                 <div class="section-container tabs clearfix" data-section="tabs" data-options="deep_linking: true">
 
 
-                    
+
                     <section class="active">
                         <p class="title" data-section-title>
                             <a id="tabs--text-a" href="javascript:void(0);">
@@ -69,12 +84,12 @@
                             <h3>เพิ่มข้อความในตราประทับของคุณ</h3>
 
                             <div id="group00" data-textgroup-id="0">
-                                
+
                                 <div id="tabs--groupheader00"></div>
                                 <div class="text-editor-holder">
                                     <div id="text00-00" class="row text-editor tight" data-target-id="0" >
                                         <div class="large-5 columns">
-                                            
+
                                             <input type="text" id="text00-00--input" placeholder="ป้อนข้อความที่นี่ ...">
                                         </div>
                                         <div class="small-6 large-4 columns">
@@ -88,7 +103,7 @@
                                                 <option value="Loveletter Script">Love Letters</option>
                                                 <option value="Jenna">Jenna</option>
                                                 <option value="Zakia">Zakia</option>
-                                               
+
                                             </select>
                                         </div>
                                         <div class="small-6 large-3 columns">
@@ -111,10 +126,10 @@
                                             </select>
                                         </div>
                                         <div class="large-12 columns tabs--text-icons" style="padding-bottom:10px;">
-                                            <!-- 
+                                            <!--
                                             <input type="number" class="text-size" name="text-size" value="7" min="7" max="100" maxlength="3" size="3" /> pt
                                             -->
-                                            
+
 
                                             <!--
                                             </div>
@@ -128,14 +143,14 @@
                                             <a href="javascript:void(0);"><img src="./images/designer/icon-underline.png" class="underline" alt="underline" /></a>
                                             <a href="javascript:void(0);" class="remove"><img src="./images/designer/icon-close.svg" alt="remove" /></a>
                                         </div>
-                                        
-                                        
+
+
                                     </div>
                                 </div>
                                 <p style="margin-bottom:2em;">
                                     <a id="tabs--add-textline00" class="tabs--add-textline" href="javascript:void(0);">
                                         <img src="./images/designer/icon-plus.svg" alt="plus" />เพิ่มข้อความอีกหนึ่งบรรทัด
-                                        
+
                                     </a>
                                 </p>
 
@@ -151,7 +166,7 @@
                     </section>
 
 
-                    
+
                     <section class="hidden">
                         <p class="title" data-section-title>
                             <a id="tabs--image-a" href="javascript:void(0);" id="d-image-tab">
@@ -161,7 +176,7 @@
                         </p>
                         <div id="tabs--image" style="width:100%; height:100%; position:relative" class="content" data-section-content>
 
-                            
+
                             <div id="artwork-overlay" class="wait" style="display:none;">
                                 <div>
                                     <span>
@@ -185,14 +200,11 @@
                                         <input type="radio" id="browse-link" name="artwork-links" value="browse">
                                         เรียกดูภาพตัดปะ
                                     </label>
-                                    <label>
-                                        <input type="radio" id="library-link" name="artwork-links" value="library">
-                                        เรียกดูรูปภาพของฉัน
-                                    </label>
+
                                 </section>
 
 
-                                
+
                                 <section id="artwork--upload">
                                     <h3>อัพโหลดภาพ</h3>
 
@@ -200,65 +212,68 @@
                                         ความละเอียดที่ต้องการ: 300 หรือ 600 พิกเซล / นิ้ว </p>
 
                                     <div id="ctl00_MainContentHolder_caUploadUpdatePanel">
-	
+
                                             <div id="UploadImageControl">
-                                                
 
 
 
-<div id="ctl00_MainContentHolder_UploadImage1_UploadImagePanel">
-		
+
+
+                                            <div id="ctl00_MainContentHolder_UploadImage1_UploadImagePanel">
+
+
+
+
+
         
-
         
-
-        <!-- The fileinput-button span is used to style the file input field as button -->
+                                            <!-- The fileinput-button span is used to style the file input field as button -->
         <span id="upli_btn" class="button success fileinput-button">
-            
+
             <i class="fa fa-file" aria-hidden="true"></i>
-            <span id="upli_btn_text"></span>
+            <span id="upli_btn_text">Browse...</span>
             <!-- The file input field used as target for the file upload widget -->
-            <input id="fileupload" onclick="return upli_allowed();" type="file" name="files[]">
+            <input id="fileupload" onclick="upli_allowed()" type="file" name="files[]">
         </span>
         <br>
         <br>
         <div id="upli_container" class="progress">
           <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="">
-            <span></span>            
+            <span></span>
           </div>
-        </div>        
+        </div>
         <br>
         <!-- <font color="red"></font> -->
-    
+
 	</div>
 
                                             </div>
-                                        
+
 </div>
                                 </section>
 
                                 <section id="artwork--browse">
                                     <h3>Browse Clipart</h3>
-                                    
+
                                     <div class="row">
                                         <div class="large-6 columns">
-                                            <select class="text-font small" id="clipart-select">
+                                        <select class="text-font small" id="clipart-select">
                                                 <option value="none">Select a gallery</option>
-                                            </select>
+                                            <option class="undefined" value="Animals">Animals</option><option class="undefined" value="Arrows">Arrows</option><option class="undefined" value="Basic_Recycling">Basic Recycling</option><option class="undefined" value="Beach_&amp;_Summer">Beach &amp; Summer</option><option class="undefined" value="Books">Books</option><option class="undefined" value="Business_&amp;_Occupations">Business &amp; Occupations</option><option class="undefined" value="Christmas">Christmas</option><option class="undefined" value="Emojis">Emojis</option><option class="undefined" value="Flags_&amp;_Patriotic">Flags &amp; Patriotic</option><option class="undefined" value="Flowers_&amp;_Plants">Flowers &amp; Plants</option><option class="undefined" value="Food_&amp;_Drink">Food &amp; Drink</option><option class="undefined" value="Hearts">Hearts</option><option class="undefined" value="Holiday">Holiday</option><option class="undefined" value="Kids">Kids</option><option class="undefined" value="Misc">Misc</option><option class="undefined" value="Music">Music</option><option class="undefined" value="Nautical">Nautical</option><option class="undefined" value="Real_Estate">Real Estate</option><option class="undefined" value="Recycling_Ecology">Recycling Ecology</option><option class="undefined" value="Religious">Religious</option><option class="undefined" value="School_Teacher">School Teacher</option><option class="undefined" value="Social_Media">Social Media</option><option class="undefined" value="Sports">Sports</option><option class="undefined" value="Stars">Stars</option><option class="undefined" value="Travel">Travel</option><option class="undefined" value="Trees_Leaves">Trees Leaves</option><option class="undefined" value="Wedding">Wedding</option></select>
                                         </div>
                                         <div class="large-6 columns text-right">
                                             <a href="javascript:void(0);" class="button small clean" id="gallery-position-link">Next: Position &amp; Scale</a>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="clipart-gallery">
-                                        <div id="none" class="clipart-container" style="display:none">
+                                        <div id="none" class="clipart-container" style="">
                                             <ul class="clipart-list">
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
-                                    
+
                                 </section>
 
                                 <section id="artwork--library">
@@ -275,19 +290,19 @@
                                     <div class="clipart-gallery library-gallery">
                                         <div id="user-library" class="clipart-container">
                                             <ul class="clipart-list">
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
 
-                                    
+
                                 </section>
 
                                 <section id="artwork--position">
                                     <h3>Resize &amp; Position Image</h3>
                                     <div class="row">
                                         <div class="large-3 columns selected-artwork-image">
-                                            <img id="selected-artwork-image" src="" /> 
+                                            <img id="selected-artwork-image" src="" />
                                             <span id="clip-dimensions"></span>
                                         </div>
 
@@ -298,7 +313,7 @@
                                         </div>
                                     </div>
                                     <hr />
-                                    
+
                                     <div class="row">
                                         <div class="large-3 columns">
                                             <label class="inline">Image Size</label>
@@ -306,7 +321,7 @@
                                         <div class="large-9 columns artwork-size-input">
 
                                             <div class="row">
-                                                
+
                                                 <div class="large-4 columns">
                                                     <div class="row collapse">
                                                         <div class="small-3 columns">
@@ -335,13 +350,13 @@
                                                             <span class="prefix">%</span>
                                                         </div>
                                                         <div class="small-9 columns">
-                                                            
-                                                            
-                                                    
-                                                    
-                                                            <input type="number" required id="image-size-percent" name="image-size-percent" value="10" step=".01"> 
-                                                    
-                                                           
+
+
+
+
+                                                            <input type="number" required id="image-size-percent" name="image-size-percent" value="10" step=".01">
+
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -397,22 +412,22 @@
                                     <input id="border1" type="radio" name="stamp-border" value="no" checked>ไม่มีขอบ
                                 </label>
 
-                                
+
 
                                 <label for="border3">
-                                    <input id="border3" type="radio" name="stamp-border" value="solid"> ขอบหนา 
+                                    <input id="border3" type="radio" name="stamp-border" value="solid"> ขอบหนา
                                     <div class="border-solid"></div>
                                 </label>
 
                                 <label for="border4">
-                                    <input id="border4" type="radio" name="stamp-border" value="dotted"> จุดไข่ปลา 
+                                    <input id="border4" type="radio" name="stamp-border" value="dotted"> จุดไข่ปลา
                                     <div class="border-dotted"></div>
                                 </label>
-                            
-                                 
+
+
 
                             </div>
-                            
+
                             <div class="row">
                                 <div class="large-2 columns">
                                     <label for="dropdown-border-weight" class="inline">น้ำหนัก</label>
@@ -460,7 +475,7 @@
                                             <line x1="7.7" y1="-45" x2="7.7" y2="-20" stroke="#000" stroke-width="1.4" marker-start="url(#flrls-s)" />
                                             <line x1="7.7" y1="20" x2="7.7" y2="45"stroke="#000" stroke-width="1.4" marker-end="url(#flrls-e)" />
                                         </g>
-                                         
+
                                    </g>
                                 </g>
                             </svg>
@@ -475,9 +490,9 @@
                                     <img src="./images/designer/pencil.svg" alt="Edit">
                                 </a>
                                 <span id="dimensions">0.36" W x 0.36" H</span>
-                                
+
                                     <span id="autosize-label">(Autosize Off)</span>
-                                
+
                             </div>
                         </div>
                         <div id="shape-col">
@@ -501,8 +516,8 @@
                                 <a href="javascript:void(0);" id="scalereset-btn" class="small button clean" style="position: relative; bottom: 0px; display: none;">Undo</a>
                             </div>
                             <div class="small-8 columns">
-                                
-                                <a href="javascript:void(0);" id="save-btn" class="small button clean">Login To Save</a>								
+
+                                <a href="javascript:void(0);" id="save-btn" class="small button clean">Login To Save</a>
                                 <a href="javascript:void(0);" id="proof-btn" class="small button clean">Proof</a>
                             </div>
                         </div>
@@ -512,13 +527,13 @@
                     </div>
                 </div>
 
-                
+
             </div>
+            <div id="step2"></div>
 
+        </div>
 
-        </div> 
-
-    </div> 
+    </div>
 <script type="text/javascript">
     const SVG_WIDTH = 576;
     const SVG_HEIGHT = 576;
@@ -539,7 +554,7 @@
 
     const ENABLE_IMAGE = 1;
     const ENABLE_BORDER = 's00';
-var si; 
+var si;
 var initsi = {"p1":null,"width":0,"height":0,"fSelIdx":-1,"fSelColor":"","fSelBvin":null,"user":null,"initialTemplate":"\u003cg id=\"gsvgimpression\" xml:space=\"default\" rsu:impressiongroups=\"s00:1\" rsu:layoutorder=\"s00\"\u003e\u003cg id=\"svgsubgroup00\" xml:space=\"default\" rsu:syncgroups=\"t00,g00\" rsu:align=\"top\" rsu:syncsize=\"full,center\" rsu:layoutorder=\"g00,t00\" rsu:dmsize=\"24,24\"\u003e\u003cg id=\"svgtextgroup00\" xml:space=\"default\" rsu:syncsize=\"best,center\" rsu:anchor=\"opposite,g00:o\"\u003e\u003c/g\u003e\u003cg id=\"svggraphicgroup00\" xml:space=\"default\" rsu:align=\"top\"\u003e\u003c/g\u003e\u003c/g\u003e\u003c/g\u003e","allowedBodies":"[\"Maxlight,Rectangle,,,MAXLIGHT_XL_305|MAXLIGHT_XL_325,Premium - 50,000+ impressions\",\"Trodat,Rectangle,,,,Standard - 7,000+ impressions\", \"TheStampMaker.com,Rectangle,,,,Economy - for use with a stamp pad\"]","initialBody":null,"templateProductId":"26980e28-cb46-4b7c-ac66-3675316e0750","itemId":null,"itemIdType":0};
 var brm = [
 
@@ -587,7 +602,46 @@ var brm = [
 var lgi = false;
 var dfs=[7,8,9,10,11,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,60,72,96];
 </script>
-</form> 
+</form>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h4>ขั้นตอนที่ 2 เลือกสินค้า</h4>
+        <div id="showProduct"></div>
+    </div>
+</div>
+<style>
+    body{
+        background: rgb(245, 245, 245);
+
+    }
+    .fr__pro__prize {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+ul, ol {
+    list-style: none;
+}
+.fr__pro__prize li.old__prize {
+    color: #888888;
+}
+.fr__pro__prize li {
+    color: #313131;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 5px;
+}
+.category {
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.1);
+}
+</style>
+
 
     </body>
 </html>

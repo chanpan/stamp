@@ -11,6 +11,7 @@
     // debouncing function from John Hann
     // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
     var debounce = function (func, threshold, execAsap) {
+        console.log('debonuce ok...');
         var timeout;
 
         return function debounced() {
@@ -38,6 +39,7 @@
 /*SET HEIGHTS - equal height columns*/
 var item = "";
 function setheighttotallest(item) {
+    console.log('setheighttotallest ok...');
     if (window.matchMedia("(min-width: 768px)").matches) {
         var maxHeight = -1;
 
