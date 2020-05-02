@@ -141,10 +141,18 @@ function AddToCart(n, t, i, r, u, f, e, o, s, h, c) {
 }
 
 function GetMatchingBodies(n, t, i, r) {
+    // alert('test');
+    html2canvas(document.querySelector("#captureScreen")).then(canvas => {
+        let encodeImage = canvas.toDataURL("image/png");
+        console.log(encodeImage);
+        $("#ShowImage").attr('src', encodeImage);
+    }); 
     
     //get product
     // let url = 'http://backend.stamp.local/product/api2';
-    let url = 'http://backendstamp.newriched.com/product/api2';
+    let backendUrl = 'http://backend.safetrayang.com';
+    let frontEndUrl = 'http://safetrayang.com';
+    let url = backendUrl+'/product/api2';
     let params = {widthCM:widthCM, heightCM:heightCM,type:1};
     $.get(url,params, function(result){
         let html = '<div class="row">';
@@ -153,7 +161,7 @@ function GetMatchingBodies(n, t, i, r) {
             html += `
                 <div class='col-md-3'>
                     <div class='col-md-12 category'>
-                        <a target='_blank' href='http://stamp.local/product/detail?id=${i['productId']}' style='text-decoration:none'>
+                        <a target='_blank' href='${frontEndUrl}/product/detail?id=${i['productId']}' style='text-decoration:none'>
                             ${i['image']}
                             <div class='text-center'>
                             <div>${i['productName']}</div>
@@ -168,6 +176,8 @@ function GetMatchingBodies(n, t, i, r) {
             `;
         }
         html += '</div>';
+        //captureScreen
+        
         $("#showProduct").html(html);
     });
     return false;
