@@ -150,8 +150,8 @@ function GetMatchingBodies(n, t, i, r) {
     
     //get product
     // let url = 'http://backend.stamp.local/product/api2';
-    let backendUrl = 'http://backend.safetrayang.com';
-    let frontEndUrl = 'http://safetrayang.com';
+    let backendUrl = 'https://backend.safetrayang.com';
+    let frontEndUrl = 'https://safetrayang.com';
     let url = backendUrl+'/product/api2';
     let params = {widthCM:widthCM, heightCM:heightCM,type:1};
     $.get(url,params, function(result){
