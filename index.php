@@ -52,7 +52,6 @@
 
 <body style='padding:20px;'>
 <!-- <img src="" id='ShowImage' /> -->
-<hr>
     <form name="aspnetForm" method="post" id="aspnetForm">
         <script type="text/javascript">
         //init ค่าเริ่มต้งตรงการ สีเหลี่ยมสีขาว
