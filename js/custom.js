@@ -139,25 +139,41 @@ function AddToCart(n, t, i, r, u, f, e, o, s, h, c) {
         error: c
     })
 }
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
 
 function GetMatchingBodies(n, t, i, r) {
-    // alert('test');
-    html2canvas(document.querySelector("#captureScreen")).then(canvas => {
-        let encodeImage = canvas.toDataURL("image/png");
-        console.log(encodeImage);
-        $("#ShowImage").attr('src', encodeImage);
-    }); 
-    
-    //get product
-    // let url = 'http://backend.stamp.local/product/api2';
-    let backendUrl = 'https://backend.safetrayang.com';
+
+    let backendUrl = 'http://backend.stamp.local';
+    // let backendUrl = 'https://backend.safetrayang.com';
     let frontEndUrl = 'https://safetrayang.com';
     let url = backendUrl+'/product/api2';
+    // alert('test');
+    let userID = getUrlParameter('userid');
+    html2canvas(document.querySelector("#captureScreen")).then(canvas => {
+        let encodeImage = canvas.toDataURL("image/png");
+        console.log('userid='+userID)
+        $("#ShowImage").attr('src', encodeImage);
+    }); 
+    //get product
     let params = {widthCM:widthCM, heightCM:heightCM,type:1};
     $.get(url,params, function(result){
+        
         let html = '<div class="row">';
         for(let i of result){
-            console.log(i);
+            // console.log(i);
             html += `
                 <div class='col-md-3'>
                     <div class='col-md-12 category'>
