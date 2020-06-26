@@ -156,17 +156,21 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 function GetMatchingBodies(n, t, i, r) {
 
-    let backendUrl = 'http://backend.stamp.local';
-    // let backendUrl = 'https://backend.safetrayang.com';
+    //let backendUrl = 'http://backend.stamp.local';
+    let backendUrl = 'https://backend.safetrayang.com';
     let frontEndUrl = 'https://safetrayang.com';
     let url = backendUrl+'/product/api2';
     // alert('test');
-    let userID = getUrlParameter('userid');
-    html2canvas(document.querySelector("#captureScreen")).then(canvas => {
-        let encodeImage = canvas.toDataURL("image/png");
-        console.log('userid='+userID)
-        $("#ShowImage").attr('src', encodeImage);
-    }); 
+    setTimeout(function(){
+        let userID = getUrlParameter('userid');
+        html2canvas(document.querySelector("#aspnetForm")).then(canvas => {
+            let encodeImage = canvas.toDataURL("image/png");
+            console.log('userid='+userID);
+            console.log(encodeImage);
+
+            $("#ShowImage").attr('src', encodeImage);
+        });
+    },2000); 
     //get product
     let params = {widthCM:widthCM, heightCM:heightCM,type:1};
     $.get(url,params, function(result){
@@ -194,7 +198,7 @@ function GetMatchingBodies(n, t, i, r) {
         html += '</div>';
         //captureScreen
         
-        $("#showProduct").html(html);
+        //$("#showProduct").html(html);
     });
     return false;
 
@@ -10182,7 +10186,20 @@ var _upliFinishedCallback = function(n) {
         var r = {},
             i = undefined,
             o, e, u, f;
-        return n != null && n.p == undefined && (o = artToPosition.nw / artToPosition.nh, n.w !== undefined ? (i = Number($("#image-size-width").val()), $("#image-size-width").val(i = i.toFixed(2)), i = i * 96 / artToPosition.nw, $("#image-size-height").val(Math.floor(artToPosition.nh * i / 96 * 100) / 100)) : (i = Number($("#image-size-height").val()), $("#image-size-height").val(i = i.toFixed(2)), i = i * 96 / artToPosition.nh, $("#image-size-width").val(Math.floor(artToPosition.nw * i / 96 * 100) / 100)), $("#image-size-percent").val((i * 100).toFixed(2))), e = t == !0 ? n.s != undefined ? n.s : getScale() : 1, i = Number($("#image-size-percent").val()), i *= e, setImgPercent(i = i.toFixed(2), t), r.p = i, i /= 100, r.h = artToPosition.nh * i / 96, r.w = artToPosition.nw * i / 96, u = Math.floor(r.w * 100) / 100, f = Math.floor(r.h * 100) / 100, t != !0 && (n == null || n.p == 1) && ($("#image-size-width").val(u), $("#image-size-height").val(f)), t != !0 && (r.p >= 4 && r.p <= 200 && !chkmaxhw(r.w, r.h) ? _imsz = r : ($("#image-size-height").val(Math.floor(_imsz.h * 100) / 100), $("#image-size-width").val(Math.floor(_imsz.w * 100) / 100), $("#image-size-percent").val(_imsz.p), alert("The image size you requested is either too large or too small")), $("#clip-dimensions").html(u + '" W x ' + f + '" H')), r
+        //n=12;
+        let convertToCm = 2.54;//0.3937008;
+        
+        var txtN = u*convertToCm;
+        var txtT = f*convertToCm;
+        //console.log(n);
+
+        //$("#flrls").show();
+        //$("#flrls-htext").text(txtN.toFixed(1) + ' cm.');
+        //$("#flrls-vtext").text(txtT.toFixed(1) + ' cm.');
+        widthCM = txtN.toFixed(1);
+        heightCM = txtT.toFixed(1);    
+        return n != null && n.p == undefined && (o = artToPosition.nw / artToPosition.nh, n.w !== undefined ? (i = Number($("#image-size-width").val()), $("#image-size-width").val(i = i.toFixed(2)), i = i * 96 / artToPosition.nw, $("#image-size-height").val(Math.floor(artToPosition.nh * i / 96 * 100) / 100)) : (i = Number($("#image-size-height").val()), $("#image-size-height").val(i = i.toFixed(2)), i = i * 96 / artToPosition.nh, $("#image-size-width").val(Math.floor(artToPosition.nw * i / 96 * 100) / 100)), $("#image-size-percent").val((i * 100).toFixed(2))), e = t == !0 ? n.s != undefined ? n.s : getScale() : 1, i = Number($("#image-size-percent").val()), i *= e, setImgPercent(i = i.toFixed(2), t), r.p = i, i /= 100, r.h = artToPosition.nh * i / 96, r.w = artToPosition.nw * i / 96, u = Math.floor(r.w * 100) / 100, f = Math.floor(r.h * 100) / 100, t != !0 && (n == null || n.p == 1) && ($("#image-size-width").val(u), $("#image-size-height").val(f)), t != !0 && (r.p >= 4 && r.p <= 200 && !chkmaxhw(r.w, r.h) ? _imsz = r : ($("#image-size-height").val(Math.floor(_imsz.h * 100) / 100), $("#image-size-width").val(Math.floor(_imsz.w * 100) / 100), $("#image-size-percent").val(_imsz.p), alert("The image size you requested is either too large or too small")), 
+            $("#clip-dimensions").html(u * convertToCm.toFixed(1) + ' CM. x ' + f * convertToCm.toFixed(1) + ' CM.')), r
     },
     setGraphicInfo = function() {
         var u = artToPosition.clip.attr("src"),
