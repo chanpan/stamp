@@ -565,15 +565,7 @@
                     <div id="footer-menu">
                         <div id="top-row">
                             <div id="dimensions-col">
-                                <div id="dimensions-holder">
-                                    <a href="javascript:void(0);" id="edit-dimensions-button">
-                                        <img src="./images/designer/pencil.svg" alt="Edit">
-                                    </a>
-                                    <span id="dimensions">0.36" W x 0.36" H</span>
-
-                                    <span id="autosize-label">(Autosize Off)</span>
-
-                                </div>
+                                 
                             </div>
                             <div id="shape-col">
                                 <select id="shape-dropdown" name="shape-dropdown">
