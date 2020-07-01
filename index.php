@@ -198,7 +198,7 @@
                                 <div id="artwork-overlay" class="wait" style="display:none;">
                                     <div>
                                         <span>
-                                            Please wait...
+                                            กรุณารอ...
                                         </span>
                                         <img src="./images/system/ajax-loader.gif" alt="processing" />
                                     </div>
@@ -249,7 +249,7 @@
                                                     <span id="upli_btn" class="button success fileinput-button">
 
                                                         <i class="fa fa-file" aria-hidden="true"></i>
-                                                        <span id="upli_btn_text">Browse...</span>
+                                                        <span id="upli_btn_text">เลือก...</span>
                                                         <!-- The file input field used as target for the file upload widget -->
                                                         <input id="fileupload" onclick="upli_allowed()" type="file"
                                                             name="files[]">
@@ -279,14 +279,13 @@
                                         <div class="row">
                                             <div class="large-6 columns">
                                                 <select class="text-font small" id="clipart-select">
-                                                    <option value="none">Select a gallery</option>
-                                                    <option class="undefined" value="Animals">Animals</option>
-                                                    <option class="undefined" value="Arrows">Arrows</option>
-                                                    <option class="undefined" value="Basic_Recycling">Basic Recycling
+                                                    <option value="none">เลือกแกลเลอรี่</option>
+                                                    <option class="undefined" value="Animals">สัตว์</option>
+                                                    <option class="undefined" value="Arrows">ลูกศร</option>
+                                                    <option class="undefined" value="Basic_Recycling">การรีไซเคิลขั้นพื้นฐาน
                                                     </option>
-                                                    <option class="undefined" value="Beach_&amp;_Summer">Beach &amp;
-                                                        Summer</option>
-                                                    <option class="undefined" value="Books">Books</option>
+                                                    <option class="undefined" value="Beach_&amp;_Summer">ชายหาดฤดูร้อน</option>
+                                                    <option class="undefined" value="Books">หนังสือ</option>
                                                     <option class="undefined" value="Business_&amp;_Occupations">
                                                         Business &amp; Occupations</option>
                                                     <option class="undefined" value="Christmas">Christmas</option>
@@ -319,7 +318,7 @@
                                             </div>
                                             <div class="large-6 columns text-right">
                                                 <a href="javascript:void(0);" class="button small clean"
-                                                    id="gallery-position-link">Next: Position &amp; Scale</a>
+                                                    id="gallery-position-link">ถัดไป: ตำแหน่ง &amp; ขนาด</a>
                                             </div>
                                         </div>
 
@@ -337,11 +336,11 @@
 
                                         <div class="row">
                                             <div class="large-6 columns">
-                                                <h3>Browse My Images</h3>
+                                                <h3>เรียกดูรูปภาพของฉัน</h3>
                                             </div>
                                             <div class="large-6 columns text-right">
                                                 <a href="javascript:void(0);" class="button small clean"
-                                                    id="library-position-link">Next: Position &amp; Scale</a>
+                                                    id="library-position-link">ถัดไป: ตำแหน่ง &amp; ขนาด</a>
                                             </div>
                                         </div>
 
@@ -357,7 +356,7 @@
                                     </section>
 
                                     <section id="artwork--position">
-                                        <h3>Resize &amp; Position Image</h3>
+                                        <h3>ปรับขนาด &amp; ตำแหน่งรูปภาพ</h3>
                                         <div class="row">
                                             <div class="large-3 columns selected-artwork-image">
                                                 <img id="selected-artwork-image" src="" />
@@ -374,7 +373,7 @@
 
                                         <div class="row">
                                             <div class="large-3 columns">
-                                                <label class="inline">Image Size</label>
+                                                <label class="inline">ขนาดรูปภาพ</label>
                                             </div>
                                             <div class="large-9 columns artwork-size-input">
 
@@ -463,7 +462,7 @@
 
                                         <hr />
                                         <a href="javascript:void(0);" class="button clean"
-                                            id="apply-image-link">Apply</a>
+                                            id="apply-image-link">ใช้</a>
                                     </section>
                                 </div>
                             </div>
@@ -578,10 +577,10 @@
                             </div>
                             <div id="shape-col">
                                 <select id="shape-dropdown" name="shape-dropdown">
-                                    <option value="square">Square</option>
-                                    <option value="rectangle" selected="">Rectangle</option>
-                                    <option value="circle">Circle</option>
-                                    <option value="oval">Oval</option>
+                                    <option value="square">สี่เหลี่ยม</option>
+                                    <option value="rectangle" selected="">สี่เหลี่ยมผืนผ้า</option>
+                                    <option value="circle">วงกลม</option>
+                                    <option value="oval">รูปไข่</option>
                                 </select>
                             </div>
                         </div>
@@ -593,16 +592,13 @@
 
                             <div class="row">
                                 <div class="small-4 columns">
-                                    <a href="javascript:void(0);" id="start-over-btn" class="small button clean">Start
-                                        Over</a>
+                                    <a href="javascript:void(0);" id="start-over-btn" class="small button clean">เริ่มต้นใหม่</a>
                                     <a href="javascript:void(0);" id="scalereset-btn" class="small button clean"
-                                        style="position: relative; bottom: 0px; display: none;">Undo</a>
+                                        style="position: relative; bottom: 0px; display: none;">เลิกทำ</a>
                                 </div>
                                 <div class="small-8 columns">
 
-                                    <a href="javascript:void(0);" id="save-btn" class="small button clean">Login To
-                                        Save</a>
-                                    <a href="javascript:void(0);" id="proof-btn" class="small button clean">Proof</a>
+                                    <a href="javascript:void(0);" id="proof-btn" class="small button clean">พิสูจน์</a>
                                 </div>
                             </div>
                         </div>
