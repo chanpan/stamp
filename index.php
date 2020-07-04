@@ -590,7 +590,6 @@
                                 </div>
                                 <div class="small-8 columns">
 
-                                    <a href="javascript:void(0);" id="proof-btn" class="small button clean">พิสูจน์</a>
                                 </div>
                             </div>
                         </div>
