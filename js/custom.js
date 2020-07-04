@@ -164,25 +164,29 @@ function GetMatchingBodies(n, t, i, r) {
     $("#showProduct").html('<h1 class="text-center">กำลังโหลดข้อมูล...</h1>');
     $.get(url,params, function(result){
         let html = '<div class="row"><h4>ขั้นตอนที่ 2 เลือกสินค้า</h4>';
-         
-        for(let i of result){
+        
+        for(let res of result){
             // console.log(i)
             html += `
                 <div class='col-md-3'>
                     <div class='col-md-12 category'>
-                        <a target='_blank' href='${frontEndUrl}/product/detail?id=${i['productId']}' style='text-decoration:none'>
-                            ${i['image']}
+                        <a target='_blank' href='${frontEndUrl}/product/detail?id=${res['productId']}' style='text-decoration:none'>
+                            ${res['image']}
                             <div class='text-center'>
-                            <div>${i['productName']}</div>
+                            <div>${res['productName']}</div>
                             <ul class="fr__pro__prize">
-                                <li class="old__prize"><strike>${i['price']}</strike></li>
-                                <li>${i['disprice']}</li>
+                                <li class="old__prize"><strike>${res['price']}</strike></li>
+                                <li>${res['disprice']}</li>
                             </ul>
                             </div>
                         </a>
                     </div>
                 </div>
             `;
+        }
+        console.log(result.length);
+        if(result.length < 1){
+            html += '<h5 class="text-center">ไม่พบรายการสินค้ากรุณาตรวจสอบอีกครั้งค่ะ</h5>';
         }
         html += '</div>';
         //captureScreen
