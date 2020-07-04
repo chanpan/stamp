@@ -159,25 +159,14 @@ function GetMatchingBodies(n, t, i, r) {
     //let backendUrl = 'http://backend.stamp.local';
     let backendUrl = 'https://backend.safetrayang.com';
     let frontEndUrl = 'https://safetrayang.com';
-    let url = backendUrl+'/product/api2';
-    // alert('test');
-    setTimeout(function(){
-        let userID = getUrlParameter('userid');
-        html2canvas(document.querySelector("#aspnetForm")).then(canvas => {
-            let encodeImage = canvas.toDataURL("image/png");
-            console.log('userid='+userID);
-            console.log(encodeImage);
-
-            $("#ShowImage").attr('src', encodeImage);
-        });
-    },2000); 
-    //get product
+    let url = backendUrl+'/product/api2'; 
     let params = {widthCM:widthCM, heightCM:heightCM,type:1};
+    $("#showProduct").html('<h1 class="text-center">กำลังโหลดข้อมูล...</h1>');
     $.get(url,params, function(result){
-        
-        let html = '<div class="row">';
+        let html = '<div class="row"><h4>ขั้นตอนที่ 2 เลือกสินค้า</h4>';
+        console.log(result);
         for(let i of result){
-            // console.log(i);
+            // console.log(i)
             html += `
                 <div class='col-md-3'>
                     <div class='col-md-12 category'>
@@ -198,7 +187,7 @@ function GetMatchingBodies(n, t, i, r) {
         html += '</div>';
         //captureScreen
         
-        //$("#showProduct").html(html);
+        $("#showProduct").html(html);
     });
     return false;
 

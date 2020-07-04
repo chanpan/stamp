@@ -764,8 +764,7 @@
 
 
     <div class="row">
-        <div class="col-md-12">
-            <h4>ขั้นตอนที่ 2 เลือกสินค้า</h4>
+        <div class="col-md-12">  
             <div id="showProduct"></div>
         </div>
     </div>
