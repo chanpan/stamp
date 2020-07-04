@@ -1,7 +1,7 @@
 <?php 
     $request_body = file_get_contents('php://input');
     $post = json_decode($request_body);
-    $storagePath = 'http://stampeditor.local/images/';
+    $storagePath = 'https://editorstamp.safetrayang.com/images/';
 
     $data = [];
     // print_r($post->categoryName);exit();
@@ -13,8 +13,8 @@
             'd'=>[
                 '__type'=> "StampmakerCore.ClipartCategoryNames", 
                 'categoryName'=> "Animals",  
-                'clipartPreviewImageURL'=> "http://stampeditor.local/images/",
-                'clipartLayoutImageURL'=>"http://stampeditor.local/images/",
+                'clipartPreviewImageURL'=> $storagePath,
+                'clipartLayoutImageURL'=>$storagePath,
                 'clipartNames'=> [ 
                     [
                         'clipartName'=> "Animals-043",
@@ -71,8 +71,8 @@
             'd'=>[
                 '__type'=> "StampmakerCore.ClipartCategoryNames", 
                 'categoryName'=> "Arrows",  
-                'clipartPreviewImageURL'=> "http://stampeditor.local/images/",
-                'clipartLayoutImageURL'=>"http://stampeditor.local/images/",
+                'clipartPreviewImageURL'=> $storagePath,
+                'clipartLayoutImageURL'=>$storagePath,
                 'clipartNames'=> [ 
                     [
                         'clipartName'=> "Arrows-001",
@@ -135,6 +135,34 @@
                     [
                         'clipartName'=> "Beach-001",
                         'clipartFile'=> "Animals/Beach-001.svg",
+                        'xSize'=> 216.66,
+                        'ySize'=> 244.25,
+                        'r'=> 133.33,
+                        'rx'=> 136.234,
+                        'ry'=> 136.973,
+                    ]
+                ]
+            ]
+        ];
+    }else if($categoryName == 'custom'){
+        $data=[
+            'd'=>[
+                '__type'=> "StampmakerCore.ClipartCategoryNames", 
+                'categoryName'=> "Beach & Summer",  
+                'clipartPreviewImageURL'=> $storagePath,
+                'clipartLayoutImageURL'=>$storagePath,
+                'clipartNames'=> [ 
+                    [
+                        'clipartName'=> "brightness_1",
+                        'clipartFile'=> "custom/1.jpg",
+                        'xSize'=> 216.66,
+                        'ySize'=> 244.25,
+                        'r'=> 133.33,
+                        'rx'=> 136.234,
+                        'ry'=> 136.973,
+                    ],[
+                        'clipartName'=> "brightness_1",
+                        'clipartFile'=> "custom/2.jpeg",
                         'xSize'=> 216.66,
                         'ySize'=> 244.25,
                         'r'=> 133.33,

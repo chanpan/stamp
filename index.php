@@ -28,7 +28,9 @@
     <script src="./js/foundation.min.js"></script>
     <script src="./js/foundation.dropdown.js"></script>
     <script src="./js/foundation.topbar.js"></script>
+    <script src="./js/app.js"></script>
     <script src="./js/custom.js"></script>
+    
     <script src="./js/html2canvas.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
@@ -209,14 +211,9 @@
 
                                     <section id="artwork--options" class="options active">
                                         <h3>เพิ่มอาร์ตเวิร์กในตราประทับของคุณ</h3>
-
-                                        <label>
-                                            <input type="radio" id="upload-link" name="artwork-links" value="upload">
-                                            อัพโหลดภาพ
-                                        </label>
                                         <label>
                                             <input type="radio" id="browse-link" name="artwork-links" value="browse">
-                                            เรียกดูภาพตัดปะ
+                                            เรียกดูภาพ
                                         </label>
 
                                     </section>
@@ -228,23 +225,13 @@
 
                                         <p>รูปแบบที่ยอมรับ: JPG, GIF, PNG<br />
                                             ความละเอียดที่ต้องการ: 300 หรือ 600 พิกเซล / นิ้ว </p>
-
                                         <div id="ctl00_MainContentHolder_caUploadUpdatePanel">
 
                                             <div id="UploadImageControl">
-
-
-
-
+ 
 
                                                 <div id="ctl00_MainContentHolder_UploadImage1_UploadImagePanel">
-
-
-
-
-
-
-
+ 
                                                     <!-- The fileinput-button span is used to style the file input field as button -->
                                                     <span id="upli_btn" class="button success fileinput-button">
 
@@ -274,47 +261,20 @@
                                     </section>
 
                                     <section id="artwork--browse">
-                                        <h3>Browse Clipart</h3>
-
+                                        <h3>เรียกดูภาพ</h3> 
                                         <div class="row">
                                             <div class="large-6 columns">
-                                                <select class="text-font small" id="clipart-select">
+                                                <select class="text-font small selectImage" id="clipart-select">
                                                     <option value="none">เลือกแกลเลอรี่</option>
                                                     <option class="undefined" value="Animals">สัตว์</option>
                                                     <option class="undefined" value="Arrows">ลูกศร</option>
                                                     <option class="undefined" value="Basic_Recycling">การรีไซเคิลขั้นพื้นฐาน
                                                     </option>
                                                     <option class="undefined" value="Beach_&amp;_Summer">ชายหาดฤดูร้อน</option>
-                                                    <option class="undefined" value="Books">หนังสือ</option>
-                                                    <option class="undefined" value="Business_&amp;_Occupations">
-                                                        Business &amp; Occupations</option>
-                                                    <option class="undefined" value="Christmas">Christmas</option>
-                                                    <option class="undefined" value="Emojis">Emojis</option>
-                                                    <option class="undefined" value="Flags_&amp;_Patriotic">Flags &amp;
-                                                        Patriotic</option>
-                                                    <option class="undefined" value="Flowers_&amp;_Plants">Flowers &amp;
-                                                        Plants</option>
-                                                    <option class="undefined" value="Food_&amp;_Drink">Food &amp; Drink
-                                                    </option>
-                                                    <option class="undefined" value="Hearts">Hearts</option>
-                                                    <option class="undefined" value="Holiday">Holiday</option>
-                                                    <option class="undefined" value="Kids">Kids</option>
-                                                    <option class="undefined" value="Misc">Misc</option>
-                                                    <option class="undefined" value="Music">Music</option>
-                                                    <option class="undefined" value="Nautical">Nautical</option>
-                                                    <option class="undefined" value="Real_Estate">Real Estate</option>
-                                                    <option class="undefined" value="Recycling_Ecology">Recycling
-                                                        Ecology</option>
-                                                    <option class="undefined" value="Religious">Religious</option>
-                                                    <option class="undefined" value="School_Teacher">School Teacher
-                                                    </option>
-                                                    <option class="undefined" value="Social_Media">Social Media</option>
-                                                    <option class="undefined" value="Sports">Sports</option>
-                                                    <option class="undefined" value="Stars">Stars</option>
-                                                    <option class="undefined" value="Travel">Travel</option>
-                                                    <option class="undefined" value="Trees_Leaves">Trees Leaves</option>
-                                                    <option class="undefined" value="Wedding">Wedding</option>
+                                                    <option class="undefined" value="custom">เลือกจากไฟล์</option>
                                                 </select>
+                                                
+
                                             </div>
                                             <div class="large-6 columns text-right">
                                                 <a href="javascript:void(0);" class="button small clean"

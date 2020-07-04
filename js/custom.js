@@ -119,9 +119,10 @@ function InitJqup() {
 }
 
 function upli_allowed(n) {
-    //console.log(n);
+    console.log(n);
     //upli_cancel(n);
     return $("#upli_btn_text").text() == upli_btn_idle_text ? !0 : ($("#upli_btn_text").text() != "Canceling..." && window.setTimeout(function() {
+        // console.log('ok');
         upli_cancel(n)
     }, 0), !1)
 }
@@ -9944,7 +9945,8 @@ $(document).ready(function() {
     });
     $("#clipart-select").change(function() {
         var n = $("#clipart-select option:selected").val();
-        //alert(n);
+         
+
         n != undefined && selectClipartGallery(n)
     });
     $("#artwork--back-link").on("click", function() {
