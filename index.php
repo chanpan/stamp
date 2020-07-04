@@ -572,7 +572,7 @@
                                     <option value="square">สี่เหลี่ยม</option>
                                     <option value="rectangle" selected="">สี่เหลี่ยมผืนผ้า</option>
                                     <option value="circle">วงกลม</option>
-                                    <option value="oval">รูปไข่</option>
+                                    <option value="oval">วงรี</option>
                                 </select>
                             </div>
                         </div>
