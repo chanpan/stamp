@@ -164,7 +164,6 @@ function GetMatchingBodies(n, t, i, r) {
     $("#showProduct").html('<h1 class="text-center">กำลังโหลดข้อมูล...</h1>');
     $.get(url,params, function(result){
         let html = '<div class="row"><h4>ขั้นตอนที่ 2 เลือกสินค้า</h4>';
-        console.log(result);
         for(let i of result){
             // console.log(i)
             html += `
