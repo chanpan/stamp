@@ -1,5 +1,5 @@
 <?php 
-    $storagePath = 'http://stampeditor.local/images/';
+    $storagePath = 'https://editorstamp.safetrayang.com/images/';
     // print_r($_FILES);
     $fileTmpPath = $_FILES['file']['tmp_name'];
     $fileName = $_FILES['file']['name'];
