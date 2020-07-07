@@ -43,6 +43,9 @@
                 console.log(html);
                 $("#clipart-category-custom ul").append(html);
                 $(".clip-image-active").trigger('click');
+                setTimeout(function(){
+                    $(".gallery-position-link").trigger('click');
+                },1000);
             }
         });
     });
