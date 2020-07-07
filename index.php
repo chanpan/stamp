@@ -28,8 +28,9 @@
     <script src="./js/foundation.min.js"></script>
     <script src="./js/foundation.dropdown.js"></script>
     <script src="./js/foundation.topbar.js"></script>
-    <script src="./js/app.js"></script>
+    
     <script src="./js/custom.js"></script>
+    <script src="./js/app.js"></script>
     
     <script src="./js/html2canvas.min.js"></script>
 
@@ -266,12 +267,13 @@
                                             <div class="large-6 columns">
                                                 <select class="text-font small selectImage" id="clipart-select">
                                                     <option value="none">เลือกแกลเลอรี่</option>
+                                                    <option class="undefined" value="custom">เลือกจากไฟล์</option>
+
                                                     <option class="undefined" value="Animals">สัตว์</option>
                                                     <option class="undefined" value="Arrows">ลูกศร</option>
                                                     <option class="undefined" value="Basic_Recycling">การรีไซเคิลขั้นพื้นฐาน
                                                     </option>
                                                     <option class="undefined" value="Beach_&amp;_Summer">ชายหาดฤดูร้อน</option>
-                                                    <option class="undefined" value="custom">เลือกจากไฟล์</option>
                                                 </select>
                                                 
 
@@ -283,6 +285,7 @@
                                         </div>
 
                                         <div class="clipart-gallery">
+                                            <input id="fileImage" name="fileImage" type="file" accept="image/*" />
                                             <div id="none" class="clipart-container" style="">
                                                 <ul class="clipart-list">
 
@@ -306,8 +309,9 @@
 
                                         <div class="clipart-gallery library-gallery">
                                             <div id="user-library" class="clipart-container">
+                                                
                                                 <ul class="clipart-list">
-
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
