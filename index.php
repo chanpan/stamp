@@ -285,7 +285,11 @@
                                         </div>
 
                                         <div class="clipart-gallery">
-                                            <input id="fileImage" name="fileImage" type="file" accept="image/*" />
+                                           <div>
+                                                <label>เลือกไฟล์จากคอมพิวเตอร์หรือมือถือ</label>
+                                                <input id="fileImage" name="fileImage" type="file" accept="image/*" />
+                                           </div>
+                                           
                                             <div id="none" class="clipart-container" style="">
                                                 <ul class="clipart-list">
 
