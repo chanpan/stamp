@@ -60,7 +60,8 @@
 
 
 <body style='padding:20px;'>
-    <!-- <img src="" id='ShowImage' /> -->
+    <img src="" id='ShowImage' />
+    <input type="hidden" id='userID' value='<?= $_GET['userid']; ?>'>
     <form name="aspnetForm" method="post" id="aspnetForm">
         <script type="text/javascript">
         //init ค่าเริ่มต้งตรงการ สีเหลี่ยมสีขาว
@@ -732,6 +733,7 @@
 
     <div class="row">
         <div class="col-md-12">  
+            <div id="isLoading"></div>
             <div id="showProduct"></div>
         </div>
     </div>

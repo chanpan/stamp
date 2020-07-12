@@ -157,9 +157,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 function GetMatchingBodies(n, t, i, r) {
 
-    //let backendUrl = 'http://backend.stamp.local';
+    // let backendUrl = 'http://backend.stamp.local';
     let backendUrl = 'https://backend.safetrayang.com';
-    let frontEndUrl = 'https://safetrayang.com';
     let url = backendUrl+'/product/api2'; 
     let params = {widthCM:widthCM, heightCM:heightCM,type:1};
     $("#showProduct").html('<h1 class="text-center">กำลังโหลดข้อมูล...</h1>');
@@ -168,10 +167,12 @@ function GetMatchingBodies(n, t, i, r) {
         
         for(let res of result){
             // console.log(i)
+            //<a onclick='getImages(${res['productId']})' target='_blank' href='${frontEndUrl}/product/detail?id=${res['productId']}' style='text-decoration:none'>
             html += `
                 <div class='col-md-3'>
                     <div class='col-md-12 category'>
-                        <a target='_blank' href='${frontEndUrl}/product/detail?id=${res['productId']}' style='text-decoration:none'>
+                    
+                        <a onclick='getImages("${res['productId']}")' id='pro${res['productId']}' href='#' style='text-decoration:none'>
                             ${res['image']}
                             <div class='text-center'>
                             <div>${res['productName']}</div>
@@ -185,46 +186,144 @@ function GetMatchingBodies(n, t, i, r) {
                 </div>
             `;
         }
-        console.log(result.length);
+        // console.log(result.length);
+        
         if(result.length < 1){
             html += '<h5 class="text-center">ไม่พบรายการสินค้ากรุณาตรวจสอบอีกครั้งค่ะ</h5>';
         }
         html += '</div>';
         //captureScreen
-        
+        $("#isLoading").html('<h1 class="text-center">กำลังโหลดข้อมูล...</h1>');
+        $("#showProduct").hide();
         $("#showProduct").html(html);
+        setTimeout(function(){
+            $("#showProduct").show();
+            $("#isLoading").html('');
+        },2000);
+        
     });
-    return false;
-
-//    console.log('GetMatchingBodies')
-//     for (var f = '{"size": { "areas": [', u = 0; u < n.length; u++)u != 0 && (f += ","), f += JSON.stringify(n[u]); for (f += "]}", f += ',"matchCriteria": [', u = 0; u < t.length; u++)u != 0 && (f += ","), f += JSON.stringify(t[u]); f += "]}";
-//     console.log(JSON.parse(f))
-    //console.log(t)
-    // showStampBodies(!0);
-    // setAddToCartState();
-    // _bdBusy();
-
-    // $.ajax({
-    //     type: "POST",
-    //     url: "/demo.js",
-    //     data: f,
-    //     contentType: "application/json; charset=utf-8",
-    //     dataType: "json",
-    //     success: function (n) {
-    //         i(n);
-    //         _bdDone()
-    //     }, error: function (n, t, i) {
-    //         r(n, t, i);
-    //         _bdDone()
-    //     }
-    // });
+    return false; 
 }
+function getImages(id){
+                let output = []; 
+                //let frontEndUrl = 'http://stamp.local';
+                 let frontEndUrl = 'https://safetrayang.com';
+                for(let i=0; i<=20; i++){
+                    if($("#text00-0"+i).attr('data-target-id') == '0'){
+                        let textValue = $(`#text00-0${i} #text00-0${i}--input`).val();
+                        let fontFamily = $(`#text00-0${i} .small`).val();
+                        let fontSize = $(`#text00-0${i} .selectize-input .item`).text();
+                        let alignLeft=false,alignCenter=false,alignRight=false,bold=false,italic=false,underline=false;
+                        let border1=false,border2=false,border3=false,borderWeight='1 pt';
+                        let shapeDropdown = $("#shape-dropdown").val();
+                        if(shapeDropdown=='square'){
+                             shapeDropdown='สี่เหลี่ยม';
+                        }else if(shapeDropdown=='rectangle'){
+                             shapeDropdown='สี่เหลี่ยมผืนผ้า';
+                        }else if(shapeDropdown=='circle'){
+                             shapeDropdown='วงกลม';
+                        }else if(shapeDropdown=='oval'){
+                             shapeDropdown='วงรี';
+                        }
+
+                        if($(".align-left").hasClass('active')){
+                        alignLeft = true;
+                        }
+                        if($(".align-center").hasClass('active')){
+                        alignCenter = true;
+                        }
+                        if($(".align-right").hasClass('active')){
+                        alignRight = true;
+                        }
+
+                        if($(".bold").hasClass('active')){
+                        bold = true;
+                        }
+                        if($(".italic").hasClass('active')){
+                        italic = true;
+                        }
+                        if($(".underline").hasClass('active')){
+                        underline = true;
+                        }
+                        
+                        if($('#border1').is(':checked')) { border1=true; }
+                        if($('#border2').is(':checked')) { border2=true; }
+                        if($('#border3').is(':checked')) { border3=true; }
+                        borderWeight = $("#dropdown-border-weight").val();
+                        if(borderWeight == '1.66666'){
+                            borderWeight = 'ละเอียด (1 pt)';
+                        }else if(borderWeight == '2.66667'){
+                            borderWeight = 'บาง (2 pt)';
+                        }else if(borderWeight == '5.33333'){
+                            borderWeight = 'ปลานกลาง (4 pt)';
+                        }else if(borderWeight == '8'){
+                            borderWeight = 'หนา (6 pt)';
+                        }
+
+                        //image
+                        let imgSrc = $("#selected-artwork-image").attr('src');
+                        let imgSize = $("#clip-dimensions").text();
+                        let imgPosition = '';
+                        let userID = $("#userID").val();
+
+                        if($(".align-image-top").hasClass('active')){
+                           imgPosition = 'align top';
+                        }else if($(".align-image-bottom").hasClass('active')){
+                           imgPosition = 'align bottom';
+                        }else if($(".align-image-left").hasClass('active')){
+                           imgPosition = 'align left';
+                        }else if($(".align-image-right").hasClass('active')){
+                           imgPosition = 'align right';
+                        }else if($(".align-image-center").hasClass('active')){
+                           imgPosition = 'align center';
+                        }
+                        
+                        output.push({
+                            'userID':userID,
+                            'shapeDropdown':shapeDropdown,
+                            'textValue':textValue,
+                            'fontFamily':fontFamily,
+                            'fontSize':fontSize,
+                            'alignLeft':alignLeft,
+                            'alignCenter':alignCenter,
+                            'alignRight':alignRight,
+                            'bold':bold,
+                            'italic':italic,
+                            'underline':underline,
+                            'border1':border1,//ไม่มีขอบ
+                            'border2':border2,//ขอบหนา
+                            'border3':border3,//จุดไข่ปลา
+                            'borderWeight':borderWeight,
+                            'imgSrc':imgSrc,
+                            'imgSize':imgSize,
+                            'imgPosition':imgPosition
+                        });
+                    }
+                }
+                output = JSON.stringify(output);
+                let url = frontEndUrl+'/site/save-detail-stamp?userID='+$("#userID").val();
+               //let backendUrl = 'https://backend.safetrayang.com/site/save-detail-stamp?userID='+$("#userID").val();
+               $.get(url,{data:output}, function(result){
+                   result = parseInt(result);
+                   const a = document.createElement("a")
+                   a.href = `${frontEndUrl}/product/detail?id=${id}&did=${result}`;
+                   a.target = "_blank";
+                   a.rel = "noopener";
+                   a.click();
+                //    window.open(`${frontEndUrl}/product/detail?id=${id}&did=${result}`, '_BLANK');
+                    //$("#pro"+id).attr('href',`${frontEndUrl}/product/detail?id=${id}&did=${result}`);
+                    //location.href = $("#pro"+id).attr('href');
+               });  
+               return false;             
+
+}
+
 
 function GetItemMatchingBodies(n, t, i, r) {
     console.log('GetItemMatchingBodies')
     var u, f;
     if (n.ovProd = n.ovProd == undefined ? null : n.ovProd, n.ovInk = n.ovInk == undefined ? "" : n.ovInk, n.ovSize = n.ovSize == undefined ? null : n.ovSize, u = '{"item": { "itemId": ' + JSON.stringify(n.itemId) + ', "itemIdType": ' + JSON.stringify(n.itemIdType) + ', "ovProd": ' + JSON.stringify(n.ovProd) + ', "ovInk": ' + JSON.stringify(n.ovInk) + ', "ovSize": {"areas": ' + JSON.stringify(n.ovSize) + "} }", u += ',"matchCriteria": [', t != null)
-        for (f = 0; f < t.length; f++) f != 0 && (u += ","), u += JSON.stringify(t[f]);
+        for (f = 0      ; f < t.length; f++) f != 0 && (u += ","), u += JSON.stringify(t[f]);
     u += "]}";
     showStampBodies(!0);
     setAddToCartState();

@@ -5,7 +5,7 @@
 
     $data = [];
     // print_r($post->categoryName);exit();
-
+ 
     $categoryName = $post->categoryName; //$post['categoryName'];
 
     if($categoryName == 'Animals'){
